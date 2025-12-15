@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Plus, Mail, Phone, MessageCircle } from "lucide-react";
+import { Plus, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const faqs = [
@@ -99,16 +99,6 @@ const FAQSection = () => {
               <a href="tel:+4935112345678">
                 <Phone className="w-4 h-4 mr-2" />
                 Anrufen
-              </a>
-            </Button>
-            <Button variant="secondary" size="sm" asChild>
-              <a
-                href="https://wa.me/4935112345678"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="w-4 h-4 mr-2" />
-                WhatsApp
               </a>
             </Button>
           </div>
