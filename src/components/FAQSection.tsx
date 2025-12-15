@@ -15,11 +15,6 @@ const faqs = [
       "Absolut! Wir bieten spezielle Einsteigerkurse an und passen das Training individuell an dein Level an. Unsere kleine Gruppengröße ermöglicht es uns, dich optimal zu betreuen.",
   },
   {
-    question: "Wie oft sollte ich trainieren?",
-    answer:
-      "Für optimale Ergebnisse empfehlen wir 2-3 Trainingseinheiten pro Woche. Schon nach wenigen Wochen wirst du Veränderungen an deinem Körper bemerken.",
-  },
-  {
     question: "Kann ich eine Stunde stornieren?",
     answer:
       "Ja, kostenlose Stornierung ist bis zu 24 Stunden vor Kursbeginn möglich. Bei späteren Absagen wird die Einheit leider vom Kontingent abgezogen.",
