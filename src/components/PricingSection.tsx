@@ -1,6 +1,5 @@
 import { Check, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useEffect, useRef } from "react";
 
 const pricingPlans = [
   {
@@ -44,42 +43,9 @@ const pricingPlans = [
 ];
 
 const PricingSection = () => {
-  const widgetRef = useRef<HTMLDivElement>(null);
-  
   const scrollToBooking = () => {
     document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
   };
-
-  useEffect(() => {
-    if (!widgetRef.current) return;
-    
-    // Create the widget HTML structure
-    const widgetContainer = document.createElement("div");
-    widgetContainer.id = "ribbon-schedule";
-    
-    const script = document.createElement("script");
-    script.src = "https://momence.com/plugin/host-schedule/host-schedule.js";
-    script.async = true;
-    script.type = "module";
-    script.setAttribute("host_id", "123479");
-    script.setAttribute("teacher_ids", "[]");
-    script.setAttribute("location_ids", "[]");
-    script.setAttribute("tag_ids", "[]");
-    script.setAttribute("lite_mode", "true");
-    script.setAttribute("default_filter", "show-all");
-    script.setAttribute("locale", "de");
-    
-    // Clear and append
-    widgetRef.current.innerHTML = "";
-    widgetRef.current.appendChild(widgetContainer);
-    widgetRef.current.appendChild(script);
-
-    return () => {
-      if (widgetRef.current) {
-        widgetRef.current.innerHTML = "";
-      }
-    };
-  }, []);
 
   return (
     <section className="bg-gradient-to-b from-beige to-sand py-24 md:py-28">
@@ -169,7 +135,14 @@ const PricingSection = () => {
               Abendkurse schnell ausgebucht.
             </p>
           </div>
-          <div ref={widgetRef} className="min-h-[400px]" />
+          <iframe 
+            width="100%" 
+            height="1450px" 
+            src="https://www.eversports.com/widget/w/individuaalCode" 
+            frameBorder="0"
+            title="Kurs buchen"
+            className="rounded-xl"
+          />
         </div>
       </div>
     </section>
