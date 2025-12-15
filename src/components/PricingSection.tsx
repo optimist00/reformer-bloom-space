@@ -1,6 +1,6 @@
 import { Check, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const pricingPlans = [
   {
@@ -44,29 +44,19 @@ const pricingPlans = [
 ];
 
 const PricingSection = () => {
+  const widgetRef = useRef<HTMLDivElement>(null);
+  
   const scrollToBooking = () => {
     document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
-    // Remove any existing Momence elements first to prevent duplicates
-    const existingWidget = document.querySelector('[data-momence-widget]');
-    if (existingWidget) {
-      existingWidget.remove();
-    }
+    if (!widgetRef.current) return;
     
-    const existingScript = document.querySelector('script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]');
-    if (existingScript) {
-      existingScript.remove();
-    }
-
-    // Wait for container to be in DOM
-    const container = document.getElementById("ribbon-schedule");
-    if (!container) return;
-
-    // Clear container content
-    container.innerHTML = '';
-
+    // Create the widget HTML structure
+    const widgetContainer = document.createElement("div");
+    widgetContainer.id = "ribbon-schedule";
+    
     const script = document.createElement("script");
     script.src = "https://momence.com/plugin/host-schedule/host-schedule.js";
     script.async = true;
@@ -79,13 +69,14 @@ const PricingSection = () => {
     script.setAttribute("default_filter", "show-all");
     script.setAttribute("locale", "de");
     
-    // Insert script right after the container (sibling, not child)
-    container.insertAdjacentElement('afterend', script);
+    // Clear and append
+    widgetRef.current.innerHTML = "";
+    widgetRef.current.appendChild(widgetContainer);
+    widgetRef.current.appendChild(script);
 
     return () => {
-      const scriptToRemove = document.querySelector('script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]');
-      if (scriptToRemove) {
-        scriptToRemove.remove();
+      if (widgetRef.current) {
+        widgetRef.current.innerHTML = "";
       }
     };
   }, []);
@@ -178,7 +169,7 @@ const PricingSection = () => {
               Abendkurse schnell ausgebucht.
             </p>
           </div>
-          <div id="ribbon-schedule" className="min-h-[400px]" />
+          <div ref={widgetRef} className="min-h-[400px]" />
         </div>
       </div>
     </section>
