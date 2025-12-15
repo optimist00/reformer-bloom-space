@@ -1,15 +1,17 @@
-import { User } from "lucide-react";
+import jessieImage from "@/assets/jessie.jpg";
 
 const FounderSection = () => {
   return (
     <section id="about" className="bg-cream py-24 md:py-28 overflow-hidden">
       <div className="container">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
-          {/* Image Placeholder */}
-          <div className="aspect-[3/4] bg-gradient-to-br from-sand to-beige rounded-2xl flex flex-col items-center justify-center gap-4 text-muted-foreground border-2 border-dashed border-stone">
-            <User className="w-20 h-20 opacity-50" strokeWidth={1} />
-            <span className="font-heading text-2xl font-medium">Jessie</span>
-            <span className="text-sm opacity-70">Gründerin & Trainerin</span>
+          {/* Jessie Portrait */}
+          <div className="aspect-[3/4] rounded-2xl overflow-hidden">
+            <img 
+              src={jessieImage} 
+              alt="Jessie - Gründerin und Trainerin von House of Pilates Dresden" 
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Text Content */}

@@ -1,4 +1,5 @@
-import { Target, Dumbbell, Home, TrendingUp, Check, Image } from "lucide-react";
+import { Check } from "lucide-react";
+import studioImage from "@/assets/studio.jpg";
 
 const solutions = [
   {
@@ -99,9 +100,12 @@ const SolutionSection = () => {
               ))}
             </ul>
           </div>
-          <div className="aspect-[4/3] bg-gradient-to-br from-sand to-beige rounded-xl flex flex-col items-center justify-center gap-4 text-muted-foreground border-2 border-dashed border-stone">
-            <Image className="w-16 h-16 opacity-50" strokeWidth={1} />
-            <span className="font-heading text-lg">Studio Impression</span>
+          <div className="aspect-[4/3] rounded-xl overflow-hidden">
+            <img 
+              src={studioImage} 
+              alt="House of Pilates Dresden Studio mit Premium Reformern" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
