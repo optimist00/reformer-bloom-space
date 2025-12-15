@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -48,14 +48,6 @@ const Navbar = () => {
         </button>
 
         <div className="flex items-center gap-4">
-          <a
-            href="tel:+4915229256804"
-            className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <Phone className="w-4 h-4" />
-            0152 29256804
-          </a>
-          
           <Button
             variant="cta"
             size="sm"

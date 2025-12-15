@@ -10,15 +10,15 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const testimonials = [
   {
     quote:
-      "Die persönliche Betreuung ist unglaublich. Man merkt, dass Jessie wirklich auf jeden einzelnen achtet.",
-    name: "Natalie B.",
-    initial: "N",
-  },
-  {
-    quote:
       "Endlich ein Studio, in dem ich mich nicht wie eine Nummer fühle. Die Atmosphäre ist einfach perfekt!",
     name: "Lisa O.",
     initial: "L",
+  },
+  {
+    quote:
+      "Die persönliche Betreuung ist unglaublich. Man merkt, dass Jessie wirklich auf jeden einzelnen achtet.",
+    name: "Natalie B.",
+    initial: "N",
   },
   {
     quote:

@@ -13,9 +13,9 @@ const FounderSection = () => {
       }`}
     >
       <div className="container">
-        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-8 lg:gap-12 items-center">
-          {/* Jessie Portrait - kleiner auf mobile */}
-          <div className="aspect-square max-w-[280px] md:max-w-[320px] lg:max-w-none lg:aspect-[3/4] mx-auto lg:mx-0 rounded-2xl overflow-hidden">
+        <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-center">
+          {/* Jessie Portrait - kleiner und rund */}
+          <div className="w-48 h-48 md:w-56 md:h-56 mx-auto lg:mx-0 rounded-full overflow-hidden shadow-large">
             <img 
               src={jessieImage} 
               alt="Jessie - Gründerin und Trainerin von House of Pilates Dresden" 
