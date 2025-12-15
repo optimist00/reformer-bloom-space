@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import studioImage from "@/assets/studio.jpg";
+import heroImage from "@/assets/hero-studio.jpg";
 
 const Hero = () => {
   return (
@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Background Image with Cream Overlay */}
       <div className="absolute inset-0 -z-10">
         <img 
-          src={studioImage} 
+          src={heroImage} 
           alt="Pilates Studio" 
           className="absolute inset-0 w-full h-full object-cover"
         />
