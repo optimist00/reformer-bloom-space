@@ -10,9 +10,11 @@ const Hero = () => {
         <img 
           src={heroImage} 
           alt="Pilates Studio" 
-          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover opacity-90 contrast-105 saturate-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-cream/60 via-cream/50 to-sand/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-cream/30 via-cream/35 to-sand/40" />
       </div>
 
       <div className="container text-center animate-fade-in-up">
