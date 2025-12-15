@@ -27,7 +27,7 @@ const FounderSection = () => {
             <div className="relative bg-sand p-6 rounded-xl mb-8 border-l-4 border-primary">
               <p className="font-heading text-xl italic">
                 Als erfahrene Fitness- und Kurstrainerin kannte ich die Theorie –
-                doch erst Reformer Pilates hat mir geholfen.
+                doch erst Reformer Pilates hat mich überzeugt.
               </p>
             </div>
 
@@ -41,8 +41,6 @@ const FounderSection = () => {
               <p>
                 Als ich Reformer Pilates entdeckte, hat es ‚Klick' gemacht. Es war
                 die perfekte Kombination aus <strong>Ästhetik und Kraft</strong>.
-                Der schönste Nebeneffekt: Durch das gezielte Training verschwanden
-                endlich auch meine jahrelangen Rückenschmerzen.
               </p>
               <p>
                 Mit dem House of Pilates habe ich genau den Ort geschaffen, den
