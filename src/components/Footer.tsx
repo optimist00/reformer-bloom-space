@@ -42,11 +42,11 @@ const Footer = () => {
                 info@houseofpilates-dresden.de
               </a>
               <a
-                href="tel:+4935112345678"
+                href="tel:+4915229256804"
                 className="flex items-center gap-2 text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all"
               >
                 <Phone className="w-4 h-4" />
-                +49 351 123 456 78
+                0152 29256804
               </a>
               <a
                 href="https://maps.google.com"
