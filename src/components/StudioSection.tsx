@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import studioImage from "@/assets/studio.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const highlights = [
   "6 Premium Reformer",
@@ -9,8 +10,16 @@ const highlights = [
 ];
 
 const StudioSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section id="studio" className="py-20 md:py-28">
+    <section 
+      id="studio" 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-20 md:py-28 transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
       <div className="container">
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">

@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const pricingPlans = [
   {
@@ -43,12 +44,19 @@ const pricingPlans = [
 ];
 
 const PricingSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   const scrollToBooking = () => {
     document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="bg-gradient-to-b from-beige to-sand py-24 md:py-28">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`bg-gradient-to-b from-beige to-sand py-24 md:py-28 transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
       <div className="container">
         {/* Header */}
         <div id="pricing" className="text-center max-w-xl mx-auto mb-10">
