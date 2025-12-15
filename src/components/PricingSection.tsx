@@ -49,13 +49,23 @@ const PricingSection = () => {
   };
 
   useEffect(() => {
-    // Check if script already exists
+    // Remove any existing Momence elements first to prevent duplicates
+    const existingWidget = document.querySelector('[data-momence-widget]');
+    if (existingWidget) {
+      existingWidget.remove();
+    }
+    
     const existingScript = document.querySelector('script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]');
-    if (existingScript) return;
+    if (existingScript) {
+      existingScript.remove();
+    }
 
-    // Create script element inside the ribbon-schedule container
+    // Wait for container to be in DOM
     const container = document.getElementById("ribbon-schedule");
     if (!container) return;
+
+    // Clear container content
+    container.innerHTML = '';
 
     const script = document.createElement("script");
     script.src = "https://momence.com/plugin/host-schedule/host-schedule.js";
@@ -69,11 +79,10 @@ const PricingSection = () => {
     script.setAttribute("default_filter", "show-all");
     script.setAttribute("locale", "de");
     
-    // Append script directly to the container instead of body
-    container.appendChild(script);
+    // Insert script right after the container (sibling, not child)
+    container.insertAdjacentElement('afterend', script);
 
     return () => {
-      // Cleanup on unmount
       const scriptToRemove = document.querySelector('script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]');
       if (scriptToRemove) {
         scriptToRemove.remove();
