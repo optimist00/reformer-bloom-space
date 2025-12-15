@@ -44,10 +44,7 @@ const SolutionSection = () => {
             Reformer Pilates: Das effizienteste Ganzkörpertraining.
           </h2>
           <p className="text-lg text-muted-foreground">
-            Durch die einzigartige Verbindung von Kräftigung, Stabilität und
-            Beweglichkeit förderst du eine harmonische Muskelbalance, stärkst dein
-            Körperbewusstsein und kannst Verspannungen sowie Rückenbeschwerden
-            gezielt entgegenwirken.
+            Kombiniere Kraft, Ausdauer und Beweglichkeit: Für eine gesunde Muskelbalance, mehr Körpergefühl und einen schmerzfreien Rücken.
           </p>
         </div>
 
@@ -58,9 +55,7 @@ const SolutionSection = () => {
               <span>✨</span> Unser Versprechen
             </span>
             <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto">
-              Das ist <strong>Personaltraining in der Gruppe</strong>. Bei 6
-              Plätzen bist du keine Nummer. Anders als in Großraumstudios{" "}
-              <strong>sehen wir dich</strong> und gehen auf dich ein.
+              Bei uns bist du keine Nummer: Das ist <strong>Personaltraining in der Gruppe</strong>.
             </p>
           </div>
         </div>

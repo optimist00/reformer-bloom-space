@@ -13,9 +13,9 @@ const testimonials = [
   },
   {
     quote:
-      "Nach Jahren mit Rückenschmerzen bin ich endlich schmerzfrei. Das Training bei Jessie hat mein Leben verändert!",
-    name: "Sarah M.",
-    initial: "S",
+      "Nach Jahren mit Rückenschmerzen bin ich endlich schmerzfrei. Das Training bei Jessie macht einen Unterschied!",
+    name: "Andreas B.",
+    initial: "A",
   },
 ];
 

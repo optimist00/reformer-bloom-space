@@ -28,7 +28,7 @@ const Hero = () => {
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-          Nur 6 Plätze pro Kurs. Individuelle Betreuung. Sichtbare Ergebnisse.
+          Begrenzte Plätze pro Kurs. Individuelle Betreuung. Sichtbare Ergebnisse.
         </p>
 
         {/* CTA */}
