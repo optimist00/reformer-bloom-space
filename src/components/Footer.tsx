@@ -1,5 +1,6 @@
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const hours = [
@@ -98,15 +99,15 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-5 pt-8 text-sm opacity-70">
           <p>© 2024 House of Pilates Dresden. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:opacity-100 transition-opacity">
+            <Link to="/impressum" className="hover:opacity-100 transition-opacity">
               Impressum
-            </a>
-            <a href="#" className="hover:opacity-100 transition-opacity">
+            </Link>
+            <Link to="/datenschutz" className="hover:opacity-100 transition-opacity">
               Datenschutz
-            </a>
-            <a href="#" className="hover:opacity-100 transition-opacity">
+            </Link>
+            <Link to="/agb" className="hover:opacity-100 transition-opacity">
               AGB
-            </a>
+            </Link>
           </div>
         </div>
       </div>
