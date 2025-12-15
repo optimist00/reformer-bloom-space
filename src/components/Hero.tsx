@@ -1,13 +1,18 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import studioImage from "@/assets/studio.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background */}
+      {/* Background Image with Cream Overlay */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 gradient-hero" />
-        <div className="absolute inset-0 gradient-pattern opacity-40" />
+        <img 
+          src={studioImage} 
+          alt="Pilates Studio" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-cream/85 via-cream/75 to-sand/80" />
       </div>
 
       <div className="container text-center animate-fade-in-up">
