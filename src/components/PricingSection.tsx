@@ -1,5 +1,6 @@
 import { Check, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 const pricingPlans = [
   {
@@ -46,6 +47,34 @@ const PricingSection = () => {
   const scrollToBooking = () => {
     document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    // Check if script already exists
+    const existingScript = document.querySelector('script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]');
+    if (existingScript) return;
+
+    const script = document.createElement("script");
+    script.src = "https://momence.com/plugin/host-schedule/host-schedule.js";
+    script.async = true;
+    script.type = "module";
+    script.setAttribute("host_id", "123479");
+    script.setAttribute("teacher_ids", "[]");
+    script.setAttribute("location_ids", "[]");
+    script.setAttribute("tag_ids", "[]");
+    script.setAttribute("lite_mode", "true");
+    script.setAttribute("default_filter", "show-all");
+    script.setAttribute("locale", "de");
+    
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup on unmount
+      const scriptToRemove = document.querySelector('script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]');
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
+    };
+  }, []);
 
   return (
     <section className="bg-gradient-to-b from-beige to-sand py-24 md:py-28">
@@ -137,9 +166,7 @@ const PricingSection = () => {
           <p className="text-muted-foreground mb-8">
             Wähle deinen gewünschten Termin direkt im Kalender
           </p>
-          <div className="min-h-[400px] bg-sand/50 rounded-xl flex items-center justify-center text-muted-foreground border-2 border-dashed border-stone">
-            <p className="text-lg">Buchungskalender Integration</p>
-          </div>
+          <div id="ribbon-schedule" className="min-h-[400px]" />
         </div>
       </div>
     </section>
