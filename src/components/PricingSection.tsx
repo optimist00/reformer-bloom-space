@@ -92,15 +92,6 @@ const PricingSection = () => {
           </p>
         </div>
 
-        {/* Scarcity Alert */}
-        <div className="flex items-center justify-center gap-3 bg-gradient-to-r from-red-100 to-red-200 px-8 py-5 rounded-xl mb-12 border border-red-200 max-w-2xl mx-auto">
-          <AlertTriangle className="w-5 h-5 text-red-700 flex-shrink-0" />
-          <p className="text-red-800">
-            <strong>Achtung:</strong> Da wir nur 6 Reformer haben, sind die
-            Abendkurse schnell ausgebucht.
-          </p>
-        </div>
-
         {/* Pricing Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
           {pricingPlans.map((plan, index) => (
@@ -163,9 +154,16 @@ const PricingSection = () => {
             Kurse
           </span>
           <h3 className="font-heading text-2xl md:text-3xl mb-3">Kurs buchen</h3>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-muted-foreground mb-4">
             Wähle deinen gewünschten Termin direkt im Kalender
           </p>
+          <div className="flex items-center justify-center gap-3 bg-gradient-to-r from-red-100 to-red-200 px-6 py-4 rounded-xl mb-8 border border-red-200 max-w-xl mx-auto">
+            <AlertTriangle className="w-5 h-5 text-red-700 flex-shrink-0" />
+            <p className="text-red-800 text-sm">
+              <strong>Achtung:</strong> Da wir nur 6 Reformer haben, sind die
+              Abendkurse schnell ausgebucht.
+            </p>
+          </div>
           <div id="ribbon-schedule" className="min-h-[400px]" />
         </div>
       </div>
