@@ -12,7 +12,7 @@ const Hero = () => {
           alt="Pilates Studio" 
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-cream/85 via-cream/75 to-sand/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-cream/60 via-cream/50 to-sand/55" />
       </div>
 
       <div className="container text-center animate-fade-in-up">
