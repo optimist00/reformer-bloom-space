@@ -53,6 +53,10 @@ const PricingSection = () => {
     const existingScript = document.querySelector('script[src="https://momence.com/plugin/host-schedule/host-schedule.js"]');
     if (existingScript) return;
 
+    // Create script element inside the ribbon-schedule container
+    const container = document.getElementById("ribbon-schedule");
+    if (!container) return;
+
     const script = document.createElement("script");
     script.src = "https://momence.com/plugin/host-schedule/host-schedule.js";
     script.async = true;
@@ -65,7 +69,8 @@ const PricingSection = () => {
     script.setAttribute("default_filter", "show-all");
     script.setAttribute("locale", "de");
     
-    document.body.appendChild(script);
+    // Append script directly to the container instead of body
+    container.appendChild(script);
 
     return () => {
       // Cleanup on unmount
