@@ -32,7 +32,7 @@ const FounderSection = () => {
             {/* Quote - kleiner */}
             <div className="relative bg-sand p-4 rounded-xl mb-6 border-l-4 border-primary">
               <p className="font-heading text-base md:text-lg italic">
-                Als Trainerin kannte ich die Theorie – doch erst Reformer Pilates hat mich überzeugt.
+                Als erfahrene Kurstrainerin kannte ich viele Trainingsmethoden – doch erst Reformer Pilates hat mich überzeugt.
               </p>
             </div>
 
