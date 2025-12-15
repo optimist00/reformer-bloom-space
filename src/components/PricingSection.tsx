@@ -116,6 +116,27 @@ const PricingSection = () => {
           ))}
         </div>
 
+        {/* Booking Widget */}
+        <div
+          id="booking"
+          className="bg-white rounded-2xl p-10 md:p-14 shadow-soft text-center"
+        >
+          <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
+            Kurse
+          </span>
+          <h3 className="font-heading text-2xl md:text-3xl mb-3">Kurs buchen</h3>
+          <p className="text-muted-foreground mb-6">
+            Wähle deinen gewünschten Termin direkt im Kalender
+          </p>
+          <iframe 
+            src="https://backoffice.bsport.io/m/ayana-studio/bsport-widget-995258/calendar?lang=de" 
+            width="100%" 
+            height="800"
+            frameBorder="0"
+            title="Kurs buchen"
+            className="rounded-xl border-0"
+          />
+        </div>
       </div>
     </section>
   );
