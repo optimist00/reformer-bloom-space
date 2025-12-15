@@ -1,6 +1,15 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const PhilosophySection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section className="py-16 md:py-24 bg-beige">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-16 md:py-24 bg-beige transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
       <div className="container">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-primary/70 mb-4">

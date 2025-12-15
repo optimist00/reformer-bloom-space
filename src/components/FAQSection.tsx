@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Plus, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const faqs = [
   {
@@ -32,13 +33,20 @@ const faqs = [
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { ref, isVisible } = useScrollAnimation();
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section id="faq" className="bg-beige py-24 md:py-28">
+    <section 
+      id="faq" 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`bg-beige py-24 md:py-28 transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
       <div className="container">
         <div className="bg-cream rounded-2xl p-8 md:p-14 shadow-soft">
           {/* Header */}

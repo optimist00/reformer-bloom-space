@@ -5,6 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   {
@@ -43,8 +44,15 @@ const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] 
 );
 
 const TestimonialsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section className="bg-beige py-16 md:py-20">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`bg-beige py-16 md:py-20 transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
       <div className="container">
         {/* Header */}
         <div className="text-center max-w-xl mx-auto mb-8 md:mb-12">

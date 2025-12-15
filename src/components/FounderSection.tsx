@@ -1,8 +1,17 @@
 import jessieImage from "@/assets/jessie.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const FounderSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section id="about" className="bg-cream py-16 md:py-24 overflow-hidden">
+    <section 
+      id="about" 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`bg-cream py-16 md:py-24 overflow-hidden transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
       <div className="container">
         <div className="grid lg:grid-cols-[1fr_1.5fr] gap-8 lg:gap-12 items-center">
           {/* Jessie Portrait - kleiner auf mobile */}
