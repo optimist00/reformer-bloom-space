@@ -19,12 +19,13 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-6 max-w-4xl mx-auto leading-tight">
-          Dein neuer Körper wartet auf dich –
-          <br />
-          <span className="text-primary italic">
-            Exklusive Reformer Pilates Community im Herzen von Dresden.
-          </span>
+          House of Pilates Dresden
         </h1>
+
+        {/* Quote */}
+        <p className="text-xl md:text-2xl text-primary italic mb-6 max-w-3xl mx-auto">
+          "Change happens through movement and movement heals"
+        </p>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
