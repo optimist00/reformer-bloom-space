@@ -22,9 +22,9 @@ const InstagramSection = () => {
           <Button 
             variant="default" 
             className="bg-foreground hover:bg-foreground/90"
-            onClick={() => window.open("https://www.instagram.com/houseofpilates_dresden", "_blank", "noopener,noreferrer")}
+            onClick={() => window.open("https://www.instagram.com/houseofpilatesdresden", "_blank", "noopener,noreferrer")}
           >
-            @houseofpilates_dresden
+            @houseofpilatesdresden
             <ExternalLink className="w-4 h-4 ml-2" />
           </Button>
         </div>
