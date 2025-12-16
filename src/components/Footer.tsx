@@ -50,7 +50,7 @@ const Footer = () => {
                 0152 29256804
               </a>
               <a
-                href="https://maps.google.com"
+                href="https://maps.google.com/?q=Musterstraße+123,+01099+Dresden"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all"
@@ -92,6 +92,22 @@ const Footer = () => {
             >
               Jetzt buchen
             </Button>
+          </div>
+        </div>
+
+        {/* Google Maps */}
+        <div className="py-12 border-b border-white/10">
+          <div className="rounded-xl overflow-hidden h-64">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.5!2d13.74!3d51.06!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDAzJzM2LjAiTiAxM8KwNDQnMjQuMCJF!5e0!3m2!1sde!2sde!4v1"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="House of Pilates Dresden Standort"
+            />
           </div>
         </div>
 
