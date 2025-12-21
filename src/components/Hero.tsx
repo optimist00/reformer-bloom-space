@@ -11,13 +11,13 @@ const Hero = () => {
     <section className="pt-20">
       {/* ===== MOBILE LAYOUT ===== */}
       <div className="md:hidden flex flex-col">
-        {/* Mobile Header - Elegant with more whitespace */}
-        <div className="bg-cream py-14 sm:py-16 px-6 text-center">
+      {/* Mobile Header - Elegant with more whitespace */}
+        <div className="bg-cream py-10 sm:py-12 px-6 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-earth-dark">
             House of Pilates Dresden
           </h1>
           {/* Decorative line */}
-          <div className="w-16 h-0.5 bg-primary/60 mx-auto my-5" />
+          <div className="w-16 h-0.5 bg-primary/60 mx-auto my-4" />
           <p className="text-base text-earth-dark/90 italic font-medium">
             "Change happens through movement and movement heals"
           </p>
@@ -28,7 +28,7 @@ const Hero = () => {
           <img 
             src={heroImage} 
             alt="House of Pilates Dresden Studio" 
-            className="w-full h-80 sm:h-96 object-cover"
+            className="w-full h-64 sm:h-80 object-cover"
           />
           {/* Soft gradient overlay at bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-cream to-transparent" />
