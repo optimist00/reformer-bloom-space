@@ -54,75 +54,80 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* ===== DESKTOP LAYOUT ===== */}
-      <div 
-        className="hidden md:flex relative min-h-screen items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        {/* Dark overlay for better contrast */}
-        <div className="absolute inset-0 bg-earth/55" />
-        {/* Gradient overlay for depth - stronger from bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-earth/80 via-earth/30 to-transparent" />
+      {/* ===== DESKTOP/TABLET LAYOUT ===== */}
+      <div className="hidden md:flex min-h-screen bg-cream">
+        {/* Left side - Text content (2/3) */}
+        <div className="w-2/3 flex flex-col justify-center px-12 lg:px-20 py-16">
+          <div className="max-w-2xl animate-fade-in">
+            {/* Headline */}
+            <h1 className="text-4xl lg:text-6xl xl:text-7xl font-extrabold leading-tight text-earth-dark mb-6">
+              House of Pilates Dresden
+            </h1>
 
-        <div className="container text-center animate-fade-in-up relative z-10 max-w-3xl mx-auto px-6">
-          {/* Headline with text shadow - larger and bolder */}
-          <h1 className="text-5xl lg:text-8xl font-extrabold mb-6 leading-tight text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.5)]">
-            House of Pilates Dresden
-          </h1>
+            {/* Decorative line */}
+            <div className="w-20 h-0.5 bg-primary/60 mb-6" />
 
-          {/* Quote with soft styling */}
-          <p className="text-xl text-cream italic mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
-            "Change happens through movement and movement heals"
-          </p>
-
-          {/* Subheadline */}
-          <p className="text-lg text-white/80 mb-10 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
-            Intime Atmosphäre. Individuelle Betreuung. Sichtbare Ergebnisse.
-          </p>
-
-          {/* CTA */}
-          <div className="mb-12">
-            <Button
-              variant="cta"
-              size="lg"
-              className="group shadow-2xl"
-              onClick={scrollToBooking}
-            >
-              Jetzt Kurs buchen
-              <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <p className="text-sm text-white/70 mt-4 font-medium drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">
-              Begrenzte Plätze verfügbar
+            {/* Quote */}
+            <p className="text-lg lg:text-xl text-earth-dark/80 italic mb-4">
+              "Change happens through movement and movement heals"
             </p>
-          </div>
 
-          {/* Stats - subtle transparent version */}
-          <div className="inline-flex flex-row items-center gap-10 bg-white/10 backdrop-blur-sm border border-white/15 px-12 py-6 rounded-2xl">
-            <div className="flex flex-col items-center gap-1">
-              <span className="font-heading text-3xl font-semibold text-white drop-shadow-md">6</span>
-              <span className="text-xs text-white/70 font-medium uppercase tracking-wider">
-                Max. Teilnehmer
-              </span>
+            {/* Subheadline */}
+            <p className="text-base lg:text-lg text-earth-dark/70 mb-10">
+              Intime Atmosphäre. Individuelle Betreuung. Sichtbare Ergebnisse.
+            </p>
+
+            {/* CTA */}
+            <div className="mb-12">
+              <Button
+                variant="cta"
+                size="lg"
+                className="group shadow-2xl"
+                onClick={scrollToBooking}
+              >
+                Jetzt Kurs buchen
+                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <p className="text-sm text-earth-dark/60 mt-4 font-medium">
+                Begrenzte Plätze verfügbar
+              </p>
             </div>
-            <div className="w-px h-8 bg-white/30" />
-            <div className="flex flex-col items-center gap-1">
-              <span className="font-heading text-3xl font-semibold text-white drop-shadow-md">100%</span>
-              <span className="text-xs text-white/70 font-medium uppercase tracking-wider">
-                Individuelle Betreuung
-              </span>
-            </div>
-            <div className="w-px h-8 bg-white/30" />
-            <div className="flex flex-col items-center gap-1">
-              <span className="font-heading text-3xl font-semibold text-white drop-shadow-md">✓</span>
-              <span className="text-xs text-white/70 font-medium uppercase tracking-wider">
-                Offen für alle Level
-              </span>
+
+            {/* Stats */}
+            <div className="inline-flex flex-row items-center gap-8 lg:gap-10 bg-sand/50 border border-earth/10 px-8 lg:px-12 py-5 rounded-2xl">
+              <div className="flex flex-col items-center gap-1">
+                <span className="font-heading text-2xl lg:text-3xl font-semibold text-earth-dark">6</span>
+                <span className="text-xs text-earth-dark/60 font-medium uppercase tracking-wider">
+                  Max. Teilnehmer
+                </span>
+              </div>
+              <div className="w-px h-8 bg-earth/20" />
+              <div className="flex flex-col items-center gap-1">
+                <span className="font-heading text-2xl lg:text-3xl font-semibold text-earth-dark">100%</span>
+                <span className="text-xs text-earth-dark/60 font-medium uppercase tracking-wider">
+                  Individuelle Betreuung
+                </span>
+              </div>
+              <div className="w-px h-8 bg-earth/20" />
+              <div className="flex flex-col items-center gap-1">
+                <span className="font-heading text-2xl lg:text-3xl font-semibold text-earth-dark">✓</span>
+                <span className="text-xs text-earth-dark/60 font-medium uppercase tracking-wider">
+                  Offen für alle Level
+                </span>
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Right side - Image (1/3) */}
+        <div className="w-1/3 relative">
+          <img 
+            src={heroImage} 
+            alt="House of Pilates Dresden Studio" 
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Soft gradient overlay on left edge */}
+          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-cream to-transparent" />
         </div>
       </div>
     </section>
