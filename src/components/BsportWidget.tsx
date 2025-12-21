@@ -17,7 +17,7 @@ const BsportWidget = () => {
         "parentElement": "bsport-widget-634722",
         "companyId": 5314,
         "franchiseId": null,
-        "dialogMode": 0,
+        "dialogMode": 1,
         "widgetType": "calendar", 
         "showFab": false,
         "fullScreenPopup": true,
