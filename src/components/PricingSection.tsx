@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import BsportWidget from "@/components/BsportWidget";
 
 const pricingPlans = [
   {
@@ -136,14 +137,7 @@ const PricingSection = () => {
           <p className="text-muted-foreground mb-6">
             Wähle deinen gewünschten Termin direkt im Kalender
           </p>
-          <iframe 
-            src="https://backoffice.bsport.io/m/ayana-studio/bsport-widget-995258/calendar?lang=de" 
-            width="100%" 
-            height="800"
-            frameBorder="0"
-            title="Kurs buchen"
-            className="rounded-xl border-0"
-          />
+          <BsportWidget />
         </div>
       </div>
     </section>
