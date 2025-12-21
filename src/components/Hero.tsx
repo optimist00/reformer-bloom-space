@@ -23,10 +23,12 @@ const Hero = () => {
         </div>
 
         {/* Mobile Content */}
-        <div className="bg-cream pt-4 pb-8 px-6 text-center">
-          <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight text-earth-dark mb-4">
+        <div className="bg-cream pt-4 pb-8 px-6 text-left">
+          <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight text-earth-dark mb-3">
             House of Pilates Dresden
           </h1>
+          {/* Decorative line */}
+          <div className="w-16 h-0.5 bg-primary/60 mb-4" />
           <p className="text-base text-earth-dark/90 mb-6 font-medium">
             Intime Atmosphäre. Individuelle Betreuung. Sichtbare Ergebnisse.
           </p>
