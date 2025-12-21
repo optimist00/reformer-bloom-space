@@ -16,11 +16,6 @@ const Hero = () => {
           <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight text-earth-dark">
             House of Pilates Dresden
           </h1>
-          {/* Decorative line */}
-          <div className="w-16 h-0.5 bg-primary/60 mx-auto my-3" />
-          <p className="text-sm text-earth-dark/90 italic font-medium">
-            "Change happens through movement and movement heals"
-          </p>
         </div>
 
         {/* Mobile Image with gradient overlay */}
@@ -66,11 +61,6 @@ const Hero = () => {
 
             {/* Decorative line */}
             <div className="w-20 h-0.5 bg-primary/60 mb-6" />
-
-            {/* Quote */}
-            <p className="text-lg lg:text-xl text-earth-dark/80 italic mb-4">
-              "Change happens through movement and movement heals"
-            </p>
 
             {/* Subheadline */}
             <p className="text-base lg:text-lg text-earth-dark/70 mb-10">
