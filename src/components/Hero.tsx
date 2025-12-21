@@ -11,27 +11,31 @@ const Hero = () => {
     <section className="pt-20">
       {/* ===== MOBILE LAYOUT ===== */}
       <div className="md:hidden flex flex-col">
-        {/* Mobile Header - Neutral Background */}
-        <div className="bg-cream py-10 px-6 text-center">
-          <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight text-earth-dark">
+        {/* Mobile Header - Elegant with more whitespace */}
+        <div className="bg-cream py-14 sm:py-16 px-6 text-center">
+          <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-earth-dark">
             House of Pilates Dresden
           </h1>
+          {/* Decorative line */}
+          <div className="w-16 h-0.5 bg-primary/60 mx-auto my-5" />
           <p className="text-base text-earth-dark/90 italic font-medium">
             "Change happens through movement and movement heals"
           </p>
         </div>
 
-        {/* Mobile Image */}
-        <div className="w-full">
+        {/* Mobile Image with gradient overlay */}
+        <div className="w-full relative">
           <img 
             src={heroImage} 
             alt="House of Pilates Dresden Studio" 
-            className="w-full h-64 sm:h-80 object-cover"
+            className="w-full h-80 sm:h-96 object-cover"
           />
+          {/* Soft gradient overlay at bottom */}
+          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-cream to-transparent" />
         </div>
 
-        {/* Mobile Footer - Neutral Background with CTA */}
-        <div className="bg-cream py-8 px-6 text-center">
+        {/* Mobile Footer - Elegant CTA section */}
+        <div className="bg-cream pt-4 pb-10 px-6 text-center">
           <p className="text-base text-earth-dark/90 mb-6 font-medium">
             Intime Atmosphäre. Individuelle Betreuung. Sichtbare Ergebnisse.
           </p>
