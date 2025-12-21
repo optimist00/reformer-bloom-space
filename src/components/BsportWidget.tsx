@@ -35,7 +35,22 @@ const BsportWidget = () => {
         widgetType: "calendar",
         showFab: false,
         fullScreenPopup: false,
-        styles: undefined,
+        styles: {
+          // Primary colors matching terracotta theme
+          primaryColor: "#9A6548",
+          primaryColorHover: "#7D5239",
+          // Background colors matching cream/sand palette
+          backgroundColor: "#FAF8F5",
+          cardBackgroundColor: "#FFFFFF",
+          // Text colors
+          textColor: "#3D3835",
+          textColorSecondary: "#7A746F",
+          // Border and accent
+          borderColor: "#E8E2DC",
+          borderRadius: "12px",
+          // Font matching the website
+          fontFamily: "Montserrat, sans-serif",
+        },
         config: {
           calendar: {}
         }
