@@ -1,6 +1,6 @@
 const QuoteSection = () => {
   return (
-    <section className="bg-cream py-12 md:py-16">
+    <section className="bg-gradient-to-b from-cream via-sand/30 to-cream py-12 md:py-16">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <blockquote className="relative">
           {/* Decorative quote mark */}
