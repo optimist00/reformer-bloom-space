@@ -19,7 +19,7 @@ const Hero = () => {
             className="w-full h-56 sm:h-72 object-cover"
           />
           {/* Brown tint overlay */}
-          <div className="absolute inset-0 bg-earth/20" />
+          <div className="absolute inset-0 bg-earth/35" />
           {/* Soft gradient overlay at bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream to-transparent" />
         </div>
@@ -117,7 +117,7 @@ const Hero = () => {
             className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Brown tint overlay */}
-          <div className="absolute inset-0 bg-earth/20" />
+          <div className="absolute inset-0 bg-earth/35" />
           {/* Soft gradient overlay on left edge */}
           <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-cream to-transparent" />
         </div>
