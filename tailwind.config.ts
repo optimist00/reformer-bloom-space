@@ -91,7 +91,10 @@ export default {
   			sand: 'hsl(var(--sand))',
   			beige: 'hsl(var(--beige))',
   			stone: 'hsl(var(--stone))',
-  			earth: 'hsl(var(--earth))',
+			earth: {
+				DEFAULT: 'hsl(var(--earth))',
+				dark: 'hsl(var(--earth-dark))'
+			},
   			terracotta: {
   				DEFAULT: 'hsl(var(--terracotta))',
   				dark: 'hsl(var(--terracotta-dark))'
