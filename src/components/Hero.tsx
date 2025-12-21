@@ -13,10 +13,10 @@ const Hero = () => {
       <div className="md:hidden flex flex-col">
         {/* Mobile Header - Neutral Background */}
         <div className="bg-cream py-10 px-6 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight text-earth">
+          <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight text-earth-dark">
             House of Pilates Dresden
           </h1>
-          <p className="text-base text-earth/80 italic">
+          <p className="text-base text-earth-dark/90 italic font-medium">
             "Change happens through movement and movement heals"
           </p>
         </div>
@@ -32,7 +32,7 @@ const Hero = () => {
 
         {/* Mobile Footer - Neutral Background with CTA */}
         <div className="bg-cream py-8 px-6 text-center">
-          <p className="text-base text-earth/80 mb-6">
+          <p className="text-base text-earth-dark/90 mb-6 font-medium">
             Intime Atmosphäre. Individuelle Betreuung. Sichtbare Ergebnisse.
           </p>
           <Button
@@ -44,6 +44,9 @@ const Hero = () => {
             Jetzt Kurs buchen
             <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
           </Button>
+          <p className="text-sm text-earth-dark/70 mt-4 font-medium">
+            Begrenzte Plätze verfügbar
+          </p>
         </div>
       </div>
 
@@ -62,14 +65,8 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-earth/80 via-earth/30 to-transparent" />
 
         <div className="container text-center animate-fade-in-up relative z-10 max-w-3xl mx-auto px-6">
-          {/* Badge - subtle version */}
-          <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2.5 rounded-full text-sm font-semibold text-white/90 mb-8 tracking-wide">
-            <span className="w-2 h-2 bg-primary rounded-full animate-pulse-dot" />
-            Exklusiv in Dresden
-          </div>
-
-          {/* Headline with text shadow */}
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
+          {/* Headline with text shadow - larger and bolder */}
+          <h1 className="text-5xl lg:text-8xl font-extrabold mb-6 leading-tight text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.5)]">
             House of Pilates Dresden
           </h1>
 
