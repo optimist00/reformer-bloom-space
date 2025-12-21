@@ -13,7 +13,7 @@ const Hero = () => {
       }}
     >
       {/* Dark overlay for better contrast */}
-      <div className="absolute inset-0 bg-earth/40" />
+      <div className="absolute inset-0 bg-earth/55" />
       {/* Gradient overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-t from-cream/40 via-transparent to-cream/20" />
 
