@@ -14,10 +14,10 @@ const BsportWidget = () => {
     </script>
     <script>
       MountBsportWidget({
-        "parentElement": "bsport-widget-634722",
+        "parentElement": "bsport-widget-619312",
         "companyId": 5314,
         "franchiseId": null,
-        "dialogMode": 1,
+        "dialogMode": 3,
         "widgetType": "calendar", 
         "showFab": false,
         "fullScreenPopup": true,
@@ -27,7 +27,7 @@ const BsportWidget = () => {
         }  
       })
     </script>
-    <div id="bsport-widget-634722"></div>
+    <div id="bsport-widget-619312"></div>
   `;
 
   return (
