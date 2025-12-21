@@ -17,24 +17,19 @@ const Hero = () => {
             House of Pilates Dresden
           </h1>
           {/* Decorative line */}
-          <div className="w-16 h-0.5 bg-primary/60 mx-auto mt-5" />
+          <div className="w-16 h-0.5 bg-primary/60 mx-auto my-5" />
+          <p className="text-base text-earth-dark/90 italic font-medium">
+            "Change happens through movement and movement heals"
+          </p>
         </div>
 
-        {/* Mobile Image with quote overlay */}
+        {/* Mobile Image with gradient overlay */}
         <div className="w-full relative">
           <img 
             src={heroImage} 
             alt="House of Pilates Dresden Studio" 
             className="w-full h-80 sm:h-96 object-cover"
           />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-earth/50 via-transparent to-transparent" />
-          {/* Quote overlay in upper third */}
-          <div className="absolute top-6 sm:top-8 left-0 right-0 px-6 text-center">
-            <p className="text-lg sm:text-xl text-white italic font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-              "Change happens through movement and movement heals"
-            </p>
-          </div>
           {/* Soft gradient overlay at bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-cream to-transparent" />
         </div>
