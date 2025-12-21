@@ -11,26 +11,22 @@ const Hero = () => {
     <section className="pt-20">
       {/* ===== MOBILE LAYOUT ===== */}
       <div className="md:hidden flex flex-col">
-      {/* Mobile Header - Compact */}
-        <div className="bg-cream py-6 sm:py-8 px-6 text-center">
-          <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight text-earth-dark">
-            House of Pilates Dresden
-          </h1>
-        </div>
-
-        {/* Mobile Image with gradient overlay */}
+        {/* Mobile Image First with gradient overlay */}
         <div className="w-full relative">
           <img 
             src={heroImage} 
             alt="House of Pilates Dresden Studio" 
-            className="w-full h-48 sm:h-64 object-cover"
+            className="w-full h-56 sm:h-72 object-cover"
           />
           {/* Soft gradient overlay at bottom */}
-          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream to-transparent" />
         </div>
 
-        {/* Mobile Footer - Compact CTA section */}
-        <div className="bg-cream pt-3 pb-8 px-6 text-center">
+        {/* Mobile Content */}
+        <div className="bg-cream pt-4 pb-8 px-6 text-center">
+          <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight text-earth-dark mb-4">
+            House of Pilates Dresden
+          </h1>
           <p className="text-base text-earth-dark/90 mb-6 font-medium">
             Intime Atmosphäre. Individuelle Betreuung. Sichtbare Ergebnisse.
           </p>

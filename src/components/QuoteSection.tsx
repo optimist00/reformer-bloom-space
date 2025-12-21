@@ -6,7 +6,7 @@ const QuoteSection = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className="bg-gradient-to-b from-cream via-sand/30 to-cream pt-16 pb-12 md:pt-24 md:pb-16"
+      className="bg-gradient-to-b from-cream via-sand/30 to-cream pt-24 pb-12 md:pt-32 md:pb-16"
     >
       <div 
         className={`max-w-3xl mx-auto px-6 text-center transition-all duration-700 ease-out ${
