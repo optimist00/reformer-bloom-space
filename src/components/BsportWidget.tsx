@@ -1,74 +1,53 @@
-import { useEffect } from "react";
-
-declare global {
-  interface Window {
-    BsportWidget?: {
-      mount: (config: Record<string, unknown>) => void;
-    };
-  }
-}
-
 const BsportWidget = () => {
-  useEffect(() => {
-    // Load the bsport widget script if not already loaded
-    if (!document.getElementById("bsport-widget-cdn")) {
-      const script = document.createElement("script");
-      script.id = "bsport-widget-cdn";
-      script.src = "https://cdn.bsport.io/scripts/widget.js";
-      document.head.appendChild(script);
-    }
-
-    // Mount the widget with retry logic
-    const mountWidget = (repeat = 1) => {
-      if (repeat > 50) return;
-      
-      if (!window.BsportWidget) {
-        setTimeout(() => mountWidget(repeat + 1), 100 * repeat);
-        return;
-      }
-      
-      window.BsportWidget.mount({
-        parentElement: "bsport-widget-681471",
-        companyId: 5314,
-        franchiseId: null,
-        dialogMode: 1,
-        widgetType: "calendar",
-        showFab: false,
-        fullScreenPopup: false,
-        styles: {
-          // Primary colors matching terracotta theme
-          primaryColor: "#9A6548",
-          primaryColorHover: "#7D5239",
-          // Background colors matching cream/sand palette
-          backgroundColor: "#FAF8F5",
-          cardBackgroundColor: "#FFFFFF",
-          // Text colors
-          textColor: "#3D3835",
-          textColorSecondary: "#7A746F",
-          // Border and accent
-          borderColor: "#E8E2DC",
-          borderRadius: "12px",
-          // Font matching the website
-          fontFamily: "Montserrat, sans-serif",
-        },
-        config: {
-          calendar: {}
+  const widgetSrc = `
+    <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
+    <script id="bsport-widget-mount">
+      function MountBsportWidget(config, repeat=1) {
+        if (repeat > 50) { return }
+        if (!window.BsportWidget) {
+          return setTimeout(() => {
+            MountBsportWidget(config,repeat+1)
+          }, 100 * repeat || 1)
         }
-      });
-    };
-
-    mountWidget();
-
-    // Cleanup function
-    return () => {
-      const widgetContainer = document.getElementById("bsport-widget-681471");
-      if (widgetContainer) {
-        widgetContainer.innerHTML = "";
+        BsportWidget.mount(config)
       }
-    };
-  }, []);
+    </script>
+    <script>
+      MountBsportWidget({
+        "parentElement": "bsport-widget-634722",
+        "companyId": 5314,
+        "franchiseId": null,
+        "dialogMode": 0,
+        "widgetType": "calendar", 
+        "showFab": false,
+        "fullScreenPopup": true,
+        "styles": undefined,
+        "config": {
+          "calendar": {}
+        }  
+      })
+    </script>
+    <div id="bsport-widget-634722"></div>
+  `;
 
-  return <div id="bsport-widget-681471" className="min-h-[600px]" />;
+  return (
+    <div style={{ overflow: "hidden", position: "relative", paddingTop: "125vh" }}>
+      <iframe
+        style={{
+          position: "absolute",
+          overflowX: "hidden",
+          height: "100%",
+          width: "100%",
+          left: 0,
+          top: 0,
+          border: 0,
+        }}
+        frameBorder="0"
+        allowFullScreen
+        srcDoc={widgetSrc}
+      />
+    </div>
+  );
 };
 
 export default BsportWidget;
