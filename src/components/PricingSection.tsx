@@ -7,7 +7,7 @@ const pricingPlans = [
   {
     name: "Einzelbuchung",
     description: "Perfekt zum Kennenlernen",
-    price: "34",
+    price: "30",
     features: [
       "55 Minuten Training",
       "Inkl. Einführung",
@@ -19,7 +19,7 @@ const pricingPlans = [
   {
     name: "10er Karte",
     description: "Unser Bestseller",
-    price: "290",
+    price: "270",
     features: [
       "10 Trainingseinheiten",
       "6 Monate Gültigkeit",
@@ -32,7 +32,7 @@ const pricingPlans = [
   {
     name: "Full-Membership",
     description: "Für maximale Ergebnisse",
-    price: "239",
+    price: "300",
     suffix: "/Monat",
     features: [
       "Unbegrenzte Kurse",
