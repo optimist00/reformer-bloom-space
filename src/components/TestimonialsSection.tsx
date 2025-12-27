@@ -1,47 +1,4 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
-const testimonials = [
-  {
-    quote:
-      "Endlich ein Studio, in dem ich mich nicht wie eine Nummer fühle. Die Atmosphäre ist einfach perfekt!",
-    name: "Lisa O.",
-    initial: "L",
-  },
-  {
-    quote:
-      "Die persönliche Betreuung ist unglaublich. Man merkt, dass Jessie wirklich auf jeden einzelnen achtet.",
-    name: "Natalie B.",
-    initial: "N",
-  },
-  {
-    quote:
-      "Nach Jahren mit Rückenschmerzen bin ich endlich schmerzfrei. Das Training bei Jessie macht einen Unterschied!",
-    name: "Andreas B.",
-    initial: "A",
-  },
-];
-
-const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] }) => (
-  <div className="bg-cream p-6 md:p-8 rounded-2xl border border-transparent hover:border-stone h-full">
-    <div className="text-base mb-2">⭐⭐⭐⭐⭐</div>
-    <blockquote className="text-base text-muted-foreground italic mb-4">
-      "{testimonial.quote}"
-    </blockquote>
-    <div className="flex items-center gap-3">
-      <div className="w-10 h-10 gradient-terracotta rounded-full flex items-center justify-center text-white font-semibold">
-        {testimonial.initial}
-      </div>
-      <span className="font-medium text-sm">{testimonial.name}</span>
-    </div>
-  </div>
-);
 
 const TestimonialsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -64,28 +21,11 @@ const TestimonialsSection = () => {
           </h2>
         </div>
 
-        {/* Mobile Carousel */}
-        <div className="md:hidden">
-          <Carousel className="w-full">
-            <CarouselContent>
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index}>
-                  <TestimonialCard testimonial={testimonial} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center gap-2 mt-4">
-              <CarouselPrevious className="relative inset-0 translate-x-0 translate-y-0" />
-              <CarouselNext className="relative inset-0 translate-x-0 translate-y-0" />
-            </div>
-          </Carousel>
-        </div>
-
-        {/* Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} />
-          ))}
+        {/* Placeholder Message */}
+        <div className="bg-cream p-8 md:p-12 rounded-2xl text-center max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground">
+            Wir führen gerade eine kostenfreie Testphase durch. Hier werden bald Erfahrungsberichte stehen.
+          </p>
         </div>
       </div>
     </section>
