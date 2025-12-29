@@ -8,7 +8,7 @@ const pricingPlans = [
     description: "Perfekt zum Kennenlernen",
     price: "30",
     features: [
-      "55 Minuten Training",
+      "50-Minuten Training",
       "Inkl. Einführung",
       "Individuelle Beratung",
     ],
@@ -17,8 +17,8 @@ const pricingPlans = [
   },
   {
     name: "10er Karte",
-    description: "Unser Bestseller",
-    price: "270",
+    description: "25€ pro Session",
+    price: "250",
     features: [
       "10 Trainingseinheiten",
       "6 Monate Gültigkeit",
@@ -29,9 +29,9 @@ const pricingPlans = [
     buttonText: "Jetzt starten",
   },
   {
-    name: "Full-Membership",
-    description: "Für maximale Ergebnisse",
-    price: "300",
+    name: "UNLIMITED Membership",
+    description: "The Ultimate Lifestyle – Unbegrenzte Kurse",
+    price: "289",
     suffix: "/Monat",
     features: [
       "Unbegrenzte Kurse",
