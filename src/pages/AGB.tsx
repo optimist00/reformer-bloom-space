@@ -2,18 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-
 const AGB = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-1 pt-32 pb-20 bg-cream">
         <div className="container max-w-3xl">
-          <Link 
-            to="/" 
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
-          >
+          <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8">
             <ArrowLeft className="w-4 h-4" />
             Zurück zur Startseite
           </Link>
@@ -104,9 +99,7 @@ const AGB = () => {
               <p>
                 (1) Eine kostenfreie Stornierung gebuchter Termine ist bis 6 Stunden vor Kursbeginn über das BSPORT SAS-System möglich. In diesem Fall wird das Guthaben (z.B. der Punkt auf der 10er-Karte) wieder gutgeschrieben.
               </p>
-              <p>
-                (2) Bei einer Stornierung weniger als 12 Stunden vor Beginn oder bei Nichterscheinen („No-Show") wird die Einheit voll berechnet bzw. von der Karte abgezogen. Bei Einzelkarten verfällt der gezahlte Betrag.
-              </p>
+              <p>(2) Bei einer Stornierung weniger als 6 Stunden vor Beginn oder bei Nichterscheinen („No-Show") wird die Einheit voll berechnet bzw. von der Karte abgezogen. Bei Einzelkarten verfällt der gezahlte Betrag.</p>
               <p>
                 (3) Dem Teilnehmer bleibt der Nachweis gestattet, dass dem Studio kein oder ein wesentlich geringerer Schaden entstanden ist (z.B. wenn der Platz noch kurzfristig anderweitig vergeben werden konnte).
               </p>
@@ -197,8 +190,6 @@ const AGB = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AGB;
