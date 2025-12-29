@@ -62,8 +62,8 @@ const BsportWidget = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-[400px]">
-      <div id="bsport-widget-504100" className="w-full" />
+    <div className="w-full min-h-[calc(100vh-120px)]">
+      <div id="bsport-widget-504100" className="w-full h-full" />
     </div>
   );
 };
