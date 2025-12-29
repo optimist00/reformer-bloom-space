@@ -84,21 +84,21 @@ const Hero = () => {
 
             {/* Stats */}
             <div className="inline-flex flex-row items-center gap-8 lg:gap-10 bg-sand/50 border border-earth/10 px-8 lg:px-12 py-5 rounded-2xl">
-              <div className="flex flex-col items-center gap-1">
+              <div className="flex flex-col items-start gap-1">
                 <span className="font-heading text-2xl lg:text-3xl font-semibold text-earth-dark">6</span>
                 <span className="text-xs text-earth-dark/60 font-medium uppercase tracking-wider">
                   Max. Teilnehmer
                 </span>
               </div>
               <div className="w-px h-8 bg-earth/20" />
-              <div className="flex flex-col items-center gap-1">
+              <div className="flex flex-col items-start gap-1">
                 <span className="font-heading text-2xl lg:text-3xl font-semibold text-earth-dark">100%</span>
                 <span className="text-xs text-earth-dark/60 font-medium uppercase tracking-wider">
                   Individuelle Betreuung
                 </span>
               </div>
               <div className="w-px h-8 bg-earth/20" />
-              <div className="flex flex-col items-center gap-1">
+              <div className="flex flex-col items-start gap-1">
                 <span className="font-heading text-2xl lg:text-3xl font-semibold text-earth-dark">✓</span>
                 <span className="text-xs text-earth-dark/60 font-medium uppercase tracking-wider">
                   Offen für alle Level
