@@ -14,7 +14,7 @@ const BsportWidget = () => {
     </script>
     <script>
       MountBsportWidget({
-        "parentElement": "bsport-widget-622649",
+        "parentElement": "bsport-widget-952652",
         "companyId": 5314,
         "franchiseId": null,
         "dialogMode": 1,
@@ -23,11 +23,20 @@ const BsportWidget = () => {
         "fullScreenPopup": false,
         "styles": undefined,
         "config": {
-          "calendar": {}
+          "calendar": {
+            "coaches": [],
+            "establishments": [],
+            "metaActivities": [],
+            "levels": [],
+            "variant": "time",
+            "groupSessionByPeriod": true,
+            "todayOnly": false,
+            "compactMode": null
+          }
         }  
       })
     </script>
-    <div id="bsport-widget-622649"></div>
+    <div id="bsport-widget-952652"></div>
   `;
 
   return (
