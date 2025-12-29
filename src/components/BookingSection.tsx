@@ -1,5 +1,7 @@
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import BsportWidget from "@/components/BsportWidget";
+import { Button } from "@/components/ui/button";
 
 const BookingSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -13,18 +15,23 @@ const BookingSection = () => {
       }`}
     >
       <div className="container">
-        <div className="text-center max-w-xl mx-auto mb-10">
+        <div className="text-center max-w-xl mx-auto">
           <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
             Kurse
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4">
             Kurs buchen
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground mb-8">
             Wähle deinen gewünschten Termin direkt im Kalender
           </p>
+          <Link to="/stundenplan">
+            <Button variant="cta" size="lg" className="group">
+              Schaue dir jetzt den Stundenplan an
+              <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
-        <BsportWidget />
       </div>
     </section>
   );
