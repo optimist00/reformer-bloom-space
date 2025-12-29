@@ -74,50 +74,50 @@ const PricingSection = () => {
 
         {/* Pricing Grid with Blur Overlay */}
         <div className="relative mb-20">
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto blur-sm pointer-events-none select-none">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto blur-sm pointer-events-none select-none">
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
-                className={`relative bg-white p-10 rounded-2xl text-center transition-all duration-300 border-2 ${
+                className={`relative bg-white p-5 md:p-10 rounded-xl md:rounded-2xl text-center transition-all duration-300 border-2 ${
                   plan.highlighted
-                    ? "border-primary scale-105"
+                    ? "border-primary md:scale-105"
                     : "border-beige"
                 }`}
               >
                 {plan.badge && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-5 py-1.5 rounded-full text-sm font-semibold">
+                  <span className="absolute -top-2.5 md:-top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-3 md:px-5 py-1 md:py-1.5 rounded-full text-xs md:text-sm font-semibold">
                     {plan.badge}
                   </span>
                 )}
-                <h3 className="font-heading text-xl font-semibold mb-2">
+                <h3 className="font-heading text-lg md:text-xl font-semibold mb-1 md:mb-2">
                   {plan.name}
                 </h3>
-                <p className="text-muted-foreground text-sm mb-6">
+                <p className="text-muted-foreground text-xs md:text-sm mb-3 md:mb-6">
                   {plan.description}
                 </p>
-                <div className="mb-6">
-                  <span className="text-lg text-muted-foreground">€</span>
-                  <span className="font-heading text-5xl font-semibold">
+                <div className="mb-3 md:mb-6">
+                  <span className="text-base md:text-lg text-muted-foreground">€</span>
+                  <span className="font-heading text-3xl md:text-5xl font-semibold">
                     {plan.price}
                   </span>
                   {plan.suffix && (
-                    <span className="text-muted-foreground">{plan.suffix}</span>
+                    <span className="text-muted-foreground text-sm md:text-base">{plan.suffix}</span>
                   )}
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2 md:space-y-3 mb-4 md:mb-8">
                   {plan.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-center gap-3 text-muted-foreground text-left border-b border-beige pb-3"
+                      className="flex items-center gap-2 md:gap-3 text-muted-foreground text-sm md:text-base text-left border-b border-beige pb-2 md:pb-3"
                     >
-                      <Check className="w-5 h-5 text-sage flex-shrink-0" />
+                      <Check className="w-4 h-4 md:w-5 md:h-5 text-sage flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <Button
                   variant={plan.highlighted ? "cta" : "secondary"}
-                  className="w-full"
+                  className="w-full text-sm md:text-base py-2 md:py-3"
                 >
                   {plan.buttonText}
                 </Button>
