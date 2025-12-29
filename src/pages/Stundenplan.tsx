@@ -23,12 +23,12 @@ const Stundenplan = () => {
       </header>
 
       {/* Widget Container */}
-      <main className="container py-8 md:py-12">
-        <div className="text-center max-w-xl mx-auto mb-8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-earth-dark mb-3">
+      <main className="w-full py-4">
+        <div className="text-center mb-4 px-4">
+          <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-2">
             Wähle deinen Kurs
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             Finde den passenden Termin und buche direkt online
           </p>
         </div>
