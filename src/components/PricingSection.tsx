@@ -1,7 +1,6 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import BsportWidget from "@/components/BsportWidget";
 
 const pricingPlans = [
   {
@@ -132,17 +131,6 @@ const PricingSection = () => {
           </div>
         </div>
 
-        {/* Booking Widget */}
-        <div id="booking" className="text-center">
-          <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
-            Kurse
-          </span>
-          <h3 className="font-heading text-2xl md:text-3xl mb-3">Kurs buchen</h3>
-          <p className="text-muted-foreground mb-6">
-            Wähle deinen gewünschten Termin direkt im Kalender
-          </p>
-          <BsportWidget />
-        </div>
       </div>
     </section>
   );
