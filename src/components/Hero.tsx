@@ -36,7 +36,7 @@ const Hero = () => {
           <Button
             variant="cta"
             size="lg"
-            className="group shadow-2xl"
+            className="group shadow-2xl bg-sand hover:bg-sand/90 text-earth-dark"
             onClick={scrollToBooking}
           >
             Jetzt Kurs buchen
