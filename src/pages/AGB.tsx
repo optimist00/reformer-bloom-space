@@ -67,13 +67,19 @@ const AGB = () => {
                 (3) Monats-Abonnements (Mitgliedschaften):
               </p>
               <p className="pl-4">
-                a) Abonnements werden auf unbestimmte Zeit geschlossen.
+                a) Vertragsgegenstand & Gebühren: Das Abonnement berechtigt den Teilnehmer zur Nutzung des vereinbarten Kontingents an Kurseinheiten pro Monat. Der monatliche Beitrag entspricht dem im Buchungssystem ausgewiesenen Preis inkl. der jeweils geltenden gesetzlichen Mehrwertsteuer.
               </p>
               <p className="pl-4">
-                b) Sie sind monatlich kündbar. Die Kündigung muss schriftlich (E-Mail reicht) oder über die Kündigungsfunktion in Eversports erfolgen.
+                b) Mindestlaufzeit: Jedes Abonnement hat eine Mindestvertragslaufzeit von drei (3) Monaten. Während dieser Zeit ist eine ordentliche Kündigung ausgeschlossen.
               </p>
               <p className="pl-4">
-                c) Erfolgt keine fristgerechte Kündigung bis zum Ende des aktuellen Vertragsmonats, verlängert sich der Vertrag automatisch um einen weiteren Monat.
+                c) Verlängerung und Kündigung: Nach Ablauf der Mindestlaufzeit verlängert sich das Abonnement automatisch auf unbestimmte Zeit und kann dann jederzeit mit einer Frist von einem Monat zum Ende des jeweiligen Abrechnungszeitraums gekündigt werden.
+              </p>
+              <p className="pl-4">
+                d) Form der Kündigung: Die Kündigung muss in Textform (z. B. per E-Mail an info@houseofpilatesdresden.de) oder – sofern technisch verfügbar – über die Self-Service-Funktion im Kundenportal von BSPORT SAS erfolgen.
+              </p>
+              <p className="pl-4">
+                e) Übertragbarkeit: Das im Abonnement enthaltene Kontingent ist personengebunden und kann nicht auf den Folgemonat übertragen werden, sofern nicht ausdrücklich anders im Tarif beschrieben. Nicht genutzte Einheiten verfallen am Ende des jeweiligen Abrechnungsmonats.
               </p>
             </section>
             
