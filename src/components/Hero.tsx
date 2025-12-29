@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-studio.jpg";
+import heroImage from "@/assets/hero-studio.webp";
 
 const Hero = () => {
   const scrollToBooking = () => {
@@ -117,8 +117,8 @@ const Hero = () => {
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: '62.5% center' }}
           />
-          {/* Brown tint overlay */}
-          <div className="absolute inset-0 bg-earth/35" />
+          {/* Dark brown tint overlay */}
+          <div className="absolute inset-0 bg-earth-dark/25" />
           {/* Soft gradient overlay on left edge */}
           <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-cream to-transparent" />
         </div>
