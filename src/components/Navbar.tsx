@@ -87,9 +87,10 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed top-[70px] left-0 right-0 bottom-0 bg-cream p-6 transition-all duration-300 ${
+        className={`lg:hidden fixed top-[70px] left-0 right-0 bottom-0 z-50 bg-cream p-6 transition-all duration-300 ${
           isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
+        style={{ backgroundColor: 'hsl(var(--cream))' }}
       >
         <ul className="flex flex-col gap-6">
           {navLinks.map((link) => (
