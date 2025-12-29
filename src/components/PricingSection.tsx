@@ -133,10 +133,7 @@ const PricingSection = () => {
         </div>
 
         {/* Booking Widget */}
-        <div
-          id="booking"
-          className="bg-white rounded-2xl p-10 md:p-14 shadow-soft text-center"
-        >
+        <div id="booking" className="text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
             Kurse
           </span>
