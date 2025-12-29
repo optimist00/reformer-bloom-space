@@ -76,13 +76,9 @@
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 240 4% 83%;
     --sidebar-ring: 258 89% 66%;
-    --font-sans:
-      "Montserrat", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-      Arial, "Noto Sans", sans-serif;
+    --font-sans: "Montserrat", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     --font-serif: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    --font-mono:
-      "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-      monospace;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
     --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
     --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
@@ -160,12 +156,7 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-medium leading-tight text-foreground;
   }
 }
@@ -176,17 +167,11 @@
   }
 
   .gradient-hero {
-    background: linear-gradient(
-      180deg,
-      hsl(0 0% 100%) 0%,
-      hsl(40 33% 98%) 25%,
-      hsl(var(--sand)) 60%,
-      hsl(var(--beige)) 100%
-    );
+    background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 33% 98%) 25%, hsl(var(--sand)) 60%, hsl(var(--beige)) 100%);
   }
 
   .gradient-pattern {
-    background-image:
+    background-image: 
       radial-gradient(circle at 20% 80%, hsl(var(--terracotta)) 0%, transparent 50%),
       radial-gradient(circle at 80% 20%, hsl(var(--sage)) 0%, transparent 40%),
       radial-gradient(circle at 40% 40%, hsl(var(--earth)) 0%, transparent 30%);
@@ -223,8 +208,7 @@
 }
 
 @keyframes pulse-dot {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
     transform: scale(1);
   }
@@ -235,11 +219,7 @@
 }
 
 @keyframes bounce-arrow {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
+  0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
   40% {
@@ -267,7 +247,7 @@
 /* ================================ */
 .bs-card-offer {
   background: #ffffff;
-  border-radius: 18px;
+  border-radius: calc(6px * 3);
   border-color: #e8e2dc;
   border-width: 2px;
   border-style: solid;
@@ -284,26 +264,216 @@
 }
 
 .bs-card-offer:hover:enabled {
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+.--disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.bs-card-offer__activity-indicator {
+  position: absolute;
+  right: -40px;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid;
 }
 
 .bs-card-offer__content {
   padding-top: 4px;
   display: flex;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 8px;
+  margin-left: calc(4px * 2);
+  margin-right: calc(4px * 2);
+  margin-bottom: calc(4px * 2);
   flex-direction: column;
   color: #3d3835;
   gap: 4px;
   flex-grow: 2;
+  width: stretch;
+}
+
+.bs-card-offer__content__top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 2;
+  flex-basis: 100%;
+}
+
+.bs-card-offer__content__top__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr auto;
+}
+
+.bs-card-offer__button__title {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  color: #3d3835;
+}
+
+.bs-card-offer__button__title:disabled {
+  background: transparent;
 }
 
 .bs-card-offer__content__title {
+  font-style: normal;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.75;
+  text-align: left;
+  align-self: flex-start;
+  letter-spacing: 0.15px;
+  grid-column: 1 / last;
+  grid-row: 1 / 2;
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+}
+
+.bs-card-offer__content__title--ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bs-card-offer__content__title--time-highlighted {
+  padding-top: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75;
+  grid-column: 1 / 4;
+  grid-row: 2 / 2;
+}
+
+.bs-card-offer__content__title--coach-highlighted {
+  padding-top: 0;
+  font-weight: 400;
+  order: -1;
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.bs-card-offer__content__time {
+  align-self: flex-start;
+  font-style: normal;
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  grid-column: 1 / 4;
+  grid-row: 2 / last;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.bs-card-offer__content__time__offer-hours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.bs-card-offer__content__time__offer-hours__start-time {
+}
+
+.bs-card-offer__content__time__offer-hours__time-separator {
+}
+
+.bs-card-offer__content__time__offer-hours__end-time-duration {
+}
+
+.bs-card-offer__content__status-chip {
+  display: flex;
+  grid-column: 4 / last;
+  grid-row: 2 / 2;
+  justify-content: flex-end;
+}
+
+.bs-card-offer__content__time--time-highlighted {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.75;
+  grid-column: 1 / last;
+  grid-row: 1 / 2;
+  gap: 4px;
+}
+
+.bs-card-offer__content__time--coach-highlighted {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  order: -2;
+}
+
+.bs-card-offer__content__status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 4px;
+  width: 102%;
+}
+
+.bs-card-offer__content__status__level {
+  justify-content: center;
+  align-items: center;
+  padding: 0px 4px;
+  display: flex;
+}
+
+.bs-card-offer__content__establishment {
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.43;
+  font-size: 0.875rem;
+  align-self: flex-start;
+  color: #7a746f;
+  text-align: left;
+  display: none !important;
+}
+
+.bs-card-offer__content__coach {
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.4px;
+  gap: 4px;
+  color: #7a746f;
+  justify-content: space-between;
+}
+
+.bs-card-offer__content__coach--coach-highlighted {
+  font-weight: 500;
+  line-height: 1.5;
   color: #3d3835;
+  font-size: 1rem;
+  justify-content: start;
+  order: -3;
+}
+
+.bs-card-offer__content__coach__name {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.bs-card-offer__content__coach__name--coach-highlighted {
+  order: 1;
+}
+
+.bs-card-offer__content__coach__avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
 }
 
 .bs-card-offer__bottom {
@@ -314,49 +484,105 @@
 }
 
 .bs-card-offer__bottom__content {
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: calc(4px * 2);
+  margin-right: calc(4px * 2);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
 }
 
-/* ================================ */
-/* FIX: ELEMENTE AUSBLENDEN (HOHE PRIORITÄT) */
-/* ================================ */
-
-/* 1. Studio-Ort in der Kachel komplett entfernen */
-.bs-card-offer__content__establishment,
-[class*="bs-card-offer__content__establishment"],
-#bsport-widget-952652 .bs-card-offer__content__establishment {
-  display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  opacity: 0 !important;
+.bs-card-offer__bottom__content--full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(4px / 2);
 }
 
-/* 2. Studio-Ort in der Listenansicht (falls aktiv) */
-.bs-offer-list-item__content__offer__left__establishment,
-.bs-offer-list-item__content__offer__left__bottom__names__establishment {
-  display: none !important;
+.bs-card-offer__content__bottom__left {
+  display: flex;
+  flex-direction: column;
+  gap: calc(4px / 2);
+  font-family: var(--subtitle1-fontFamily);
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.57;
+  font-weight: 500;
+  color: #7a746f;
 }
 
-/* 3. Filterleiste "Einrichtung" oben entfernen */
-.bs-marketplace-filters__establishment {
-  display: none !important;
+.bs-card-offer__content__bottom__left--full {
+  flex-direction: row;
+  gap: calc(4px * 2);
 }
 
-/* 4. Footer / Bsport Logo entfernen */
-.bs-footer,
-.bs-widget__footer {
-  display: none !important;
+.bs-card-offer__content__bottom__left__gender {
+  display: flex;
+  gap: calc(4px / 2);
+  align-items: center;
 }
 
-/* 5. Mobile Anpassungen */
+.bs-card-offer__content__bottom__left__gender__sex {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.bs-card-offer__content__bottom__left__gender__other {
+  display: flex;
+  align-items: center;
+}
+
+.bs-card-offer__content__bottom__left__group {
+  display: flex;
+  align-items: center;
+  gap: calc(4px / 2);
+  color: #7a746f;
+}
+
+.bs-card-offer__content__bottom__left__group__icon {
+  width: calc(4px * 2);
+  height: calc(4px * 2);
+}
+
+.bs-card-offer__content__bottom__buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bs-card-offer__content__bottom__left__group__number {
+  height: calc(4px * 2);
+  align-items: center;
+  letter-spacing: -0.5px;
+  display: flex;
+}
+
+svg.bs-card-offer__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.bs-card-offer__content__bottom__button {
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #9a6548;
+  background: #fafafa;
+  border: none;
+}
+
 @media (max-width: 1700px) {
-  .bs-card-offer__content,
+  .bs-card-offer__content {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
   .bs-card-offer__bottom__content {
     margin-left: 4px;
     margin-right: 4px;
