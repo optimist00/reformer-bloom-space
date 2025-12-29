@@ -118,7 +118,7 @@ const Hero = () => {
             style={{ objectPosition: '62.5% center' }}
           />
           {/* Dark brown tint overlay */}
-          <div className="absolute inset-0 bg-earth-dark/25" />
+          <div className="absolute inset-0 bg-black/40" />
           {/* Soft gradient overlay on left edge */}
           <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-cream to-transparent" />
         </div>
