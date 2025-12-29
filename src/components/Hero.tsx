@@ -10,28 +10,27 @@ const Hero = () => {
   return (
     <section className="pt-20">
       {/* ===== MOBILE LAYOUT ===== */}
-      <div className="md:hidden flex flex-col">
-        {/* Mobile Image First with gradient overlay */}
-        <div className="w-full relative">
-          <img 
-            src={heroImage} 
-            alt="House of Pilates Dresden Studio" 
-            className="w-full h-56 sm:h-72 object-cover"
-          />
-          {/* Brown tint overlay */}
-          <div className="absolute inset-0 bg-earth/35" />
-          {/* Soft gradient overlay at bottom */}
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream to-transparent" />
-        </div>
+      <div className="md:hidden relative min-h-[75vh]">
+        {/* Full-screen background image */}
+        <img 
+          src={heroImage} 
+          alt="House of Pilates Dresden Studio" 
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: '62.5% center' }}
+        />
+        {/* Brown tint overlay */}
+        <div className="absolute inset-0 bg-earth/30" />
+        {/* Dark gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
-        {/* Mobile Content */}
-        <div className="bg-cream pt-4 pb-8 px-6 text-left">
-          <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight text-earth-dark mb-3">
+        {/* Text Content - positioned at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pb-10 pt-20">
+          <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight text-white mb-3">
             House of Pilates Dresden
           </h1>
           {/* Decorative line */}
-          <div className="w-16 h-0.5 bg-primary/60 mb-4" />
-          <p className="text-base text-earth-dark/90 mb-6 font-medium">
+          <div className="w-16 h-0.5 bg-white/60 mb-4" />
+          <p className="text-base text-white/90 mb-6 font-medium">
             Intime Atmosphäre. Individuelle Betreuung. Sichtbare Ergebnisse.
           </p>
           <Button
@@ -43,7 +42,7 @@ const Hero = () => {
             Jetzt Kurs buchen
             <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
           </Button>
-          <p className="text-sm text-earth-dark/70 mt-4 font-medium">
+          <p className="text-sm text-white/70 mt-4 font-medium">
             Begrenzte Plätze verfügbar
           </p>
         </div>
