@@ -245,346 +245,214 @@
 /* ================================ */
 /* Bsport Marketplace Card Offer Styles */
 /* ================================ */
-.bs-card-offer {
-  background: #ffffff;
-  border-radius: calc(6px * 3);
-  border-color: #e8e2dc;
-  border-width: 2px;
-  border-style: solid;
-  cursor: pointer;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1px;
-  padding: 0 !important;
-  font-family: Helvetica, sans-serif, Roboto, Arial;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+
+/* --- 1. VERANSTALTUNGSORT AUSBLENDEN (GLOBAL) --- */
+.bs-card-offer__content__establishment,
+.bs-offer-list-item__content__offer__left__establishment,
+.bs-offer-list-item__content__offer__left__bottom__names__establishment {
+    display: none !important;
 }
 
-.bs-card-offer:hover:enabled {
-  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+/* --- 2. KACHEL-DESIGN ANPASSEN (SCHMALER & KLEINER) --- */
+
+/* Basis-Karte */
+.bs-card-offer { 
+    background: #ffffff; 
+    border-radius: 12px;
+    border-color: #e8e2dc; 
+    border-width: 2px; 
+    border-style: solid; 
+    cursor: pointer; 
+    width: 100%; 
+    max-width: 280px; 
+    margin: 0 auto;
+    position: relative; 
+    overflow: hidden; 
+    margin-bottom: 1px; 
+    padding: 0 !important; 
+    font-family: Helvetica, sans-serif, Roboto, Arial; 
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; 
 }
 
-.--disabled {
-  cursor: default;
-  opacity: 0.5;
+.bs-card-offer:hover:enabled { 
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12); 
 }
 
-.bs-card-offer__activity-indicator {
-  position: absolute;
-  right: -40px;
-  width: 0;
-  height: 0;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-top: 40px solid;
+.--disabled { cursor: default; opacity: 0.5; }
+
+.bs-card-offer__activity-indicator { position: absolute; right: -30px; width: 0; height: 0; border-left: 30px solid transparent; border-right: 30px solid transparent; border-top: 30px solid; }
+
+/* Innenabstand reduziert für kompakteren Look */
+.bs-card-offer__content { 
+    padding-top: 4px; 
+    display: flex; 
+    margin-left: 6px;
+    margin-right: 6px; 
+    margin-bottom: 6px; 
+    flex-direction: column; 
+    color: #3d3835; 
+    gap: 2px; 
+    flex-grow: 2; 
+    width: stretch; 
 }
 
-.bs-card-offer__content {
-  padding-top: 4px;
-  display: flex;
-  margin-left: calc(4px * 2);
-  margin-right: calc(4px * 2);
-  margin-bottom: calc(4px * 2);
-  flex-direction: column;
-  color: #3d3835;
-  gap: 4px;
-  flex-grow: 2;
-  width: stretch;
+.bs-card-offer__content__top { display: flex; flex-direction: column; gap: 2px; flex-grow: 2; flex-basis: 100%; }
+
+/* Raster etwas angepasst */
+.bs-card-offer__content__top__grid { display: grid; grid-template-columns: 1fr 1fr 0.5fr 0.5fr; grid-template-rows: 1fr auto; }
+
+.bs-card-offer__button__title { border: none; background: transparent; cursor: pointer; padding: 0; color: #3d3835; }
+
+/* SCHRIFTGRÖSSEN REDUZIERT FÜR KLEINERE PCS */
+.bs-card-offer__content__title { 
+    font-style: normal; 
+    font-weight: 600; 
+    font-size: 0.9rem;
+    line-height: 1.4; 
+    text-align: left; 
+    align-self: flex-start; 
+    letter-spacing: 0.1px; 
+    grid-column: 1 / last; 
+    grid-row: 1 / 2; 
+    font-family: Helvetica, sans-serif, Roboto, Arial; 
 }
 
-.bs-card-offer__content__top {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex-grow: 2;
-  flex-basis: 100%;
+.bs-card-offer__content__title--ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Zeit-Anzeige kleiner */
+.bs-card-offer__content__time { 
+    align-self: flex-start; 
+    font-style: normal; 
+    font-family: Helvetica, sans-serif, Roboto, Arial; 
+    font-weight: 400; 
+    font-size: 0.8rem;
+    line-height: 1.3; 
+    grid-column: 1 / 4; 
+    grid-row: 2 / last; 
+    text-align: left; 
+    display: flex; 
+    align-items: center; 
 }
 
-.bs-card-offer__content__top__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
-  grid-template-rows: 1fr auto;
+.bs-card-offer__content__time__offer-hours { display: flex; flex-wrap: wrap; gap: 4px; }
+.bs-card-offer__content__status-chip { display: flex; grid-column: 4 / last; grid-row: 2 / 2; justify-content: flex-end; }
+
+/* Status Chips (Level etc) kompakter */
+.bs-card-offer__content__status { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 2px; width: 100%; }
+.bs-card-offer__content__status__level { justify-content: center; align-items: center; padding: 0px 4px; display: flex; transform: scale(0.9); transform-origin: left; }
+
+/* Trainer Name kleiner */
+.bs-card-offer__content__coach { 
+    font-family: Helvetica, sans-serif, Roboto, Arial; 
+    font-style: normal; 
+    font-weight: 400; 
+    font-size: 0.75rem;
+    line-height: 1.3; 
+    display: flex; 
+    align-items: center; 
+    letter-spacing: 0.3px; 
+    gap: 4px; 
+    color: #7a746f; 
+    justify-content: space-between; 
 }
 
-.bs-card-offer__button__title {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  padding: 0;
-  color: #3d3835;
+.bs-card-offer__content__coach__avatar { width: 16px; height: 16px; border-radius: 50%; }
+
+/* Unterer Teil der Karte kompakter */
+.bs-card-offer__bottom { 
+    padding-bottom: 6px; 
+    padding-top: 6px; 
+    border-top: 1px solid #e8e2dc; 
+    width: 100%; 
 }
 
-.bs-card-offer__button__title:disabled {
-  background: transparent;
+.bs-card-offer__bottom__content { 
+    margin-left: 6px; 
+    margin-right: 6px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 4px; 
+    flex-wrap: wrap; 
 }
 
-.bs-card-offer__content__title {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.75;
-  text-align: left;
-  align-self: flex-start;
-  letter-spacing: 0.15px;
-  grid-column: 1 / last;
-  grid-row: 1 / 2;
-  font-family: Helvetica, sans-serif, Roboto, Arial;
+/* Button Text kleiner */
+.bs-card-offer__content__bottom__button { 
+    font-family: Helvetica, sans-serif, Roboto, Arial; 
+    font-style: normal; 
+    font-weight: 600; 
+    font-size: 0.75rem;
+    line-height: 1.5; 
+    align-items: center; 
+    text-align: center; 
+    letter-spacing: 0.4px; 
+    text-transform: uppercase; 
+    color: #9a6548; 
+    background: #fafafa; 
+    border: none; 
 }
 
-.bs-card-offer__content__title--ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+/* --- LISTEN-ANSICHT --- */
+.bs-offer-list-item { display: flex; background-color: #ffffff; border-width: 2px; border-style: solid; border-color: #e8e2dc; border-bottom: none; gap: calc(4px * 2); border-top: 2px solid #e8e2dc; cursor: pointer; width: 100%; font-family: Helvetica, sans-serif, Roboto, Arial; }
+.bs-offer-list-item--first { border-top-left-radius: calc(6px * 3); border-top-right-radius: calc(6px * 3); }
+.bs-offer-list-item--last { border-bottom: 1px solid #e8e2dc; border-bottom-left-radius: calc(6px * 3); border-bottom-right-radius: calc(6px * 3); }
+.bs-offer-list-item--isNotWorkshop:enabled:hover { filter: brightness(0.9); }
+.bs-offer-list-item--disabled { cursor: default; opacity: 0.5; }
+.bs-offer-list-item--isWorkshop { padding: 0; cursor: default; }
+.bs-offer-list-item--isWorkShop-with-hidden-button { cursor: pointer; }
+.bs-offer-list-item--isWorkShop-with-hidden-button:hover { filter: brightness(0.9); }
+.bs-offer-list-item__content { margin-left: calc(4px * 3); margin-top: calc(4px * 2); margin-bottom: calc(4px * 2); margin-right: calc(4px * 3); display: flex; gap: calc(4px * 2); align-items: center; width: 100%; }
+.bs-offer-list-item__content__offer { display: flex; justify-content: space-between; width: 100%; gap: 4px; }
+.bs-offer-list-item__content__offer__left { color: #3d3835; display: flex; flex-direction: column; align-items: start; gap: 4px; font-style: normal; }
+.bs-offer-list-item__content__offer__left__time { font-weight: 500; font-size: 1rem; line-height: 1.75; display: flex; }
+.bs-offer-list-item__content__time__offer-hours { display: flex; flex-wrap: wrap; gap: 4px; }
+.bs-offer-list-item__content__offer__left__time--without-date { font-size: 0.875rem; line-height: 1.43; }
+.bs-offer-list-item__content__offer__left__time--time-highlighted { order: -2; font-weight: 500; font-size: 1.125rem; line-height: 1.6; }
+.bs-offer-list-item__content__offer__left__time--coach-highlighted { color: #7a746f; }
+.bs-offer-list-item__content__offer__left__title { font-weight: 500; font-size: 1.25rem; line-height: 1.167; font-family: Helvetica, sans-serif, Roboto, Arial; display: flex; align-items: flex-start; text-align: left; }
+.bs-offer-list-item__button__title { border: none; background: transparent; cursor: pointer; padding: 0; color: #3d3835; font-family: Helvetica, sans-serif, Roboto, Arial; }
+.bs-offer-list-item__button__title:disabled { background: transparent; }
+.bs-offer-list-item__content__offer__left__title--time-highlighted { font-weight: 500; font-size: 1rem; line-height: 1.75; order: -1; }
+.bs-offer-list-item__content__offer__left__title--coach-highlighted { font-weight: 500; font-size: 1rem; line-height: 1.75; color: #3d3835; }
+.bs-offer-list-item__content__offer__left__coach { display: flex; gap: 4px; align-items: center; min-height: calc(4px * 2); font-size: 1rem; line-height: 1.5; font-weight: 400; color: #7a746f; }
+.bs-offer-list-item__content__offer__left__coaches__row { display: flex; flex-direction: row; align-items: center; }
+.bs-offer-list-item__content__offer__left__coaches__number { display: flex; margin-left: 4px; gap: 4px; align-items: center; min-height: calc(4px * 2); font-size: 1rem; line-height: 1.5; font-weight: 500; color: #9a6548; }
+.bs-offer-list-item__content__offer__left__coach__name { text-align: start; }
+.bs-offer-list-item__content__offer__left__coach--coach-highlighted { order: -2; font-weight: 500; font-size: 1.125rem; color: #3d3835; line-height: 1.6; font-family: Helvetica, sans-serif, Roboto, Arial; }
+.bs-offer-list-item__content__offer__left__bottom__icons { display: flex; flex-direction: column; align-items: center; gap: 4px; justify-content: space-between; }
+.bs-offer-list-item__content__offer__left__icon { color: #7a746f; max-width: 24px; max-height: 24px; }
+.bs-offer-list-item__content__offer__left__bottom__icons__avatar { max-width: calc(4px * 4); max-height: calc(4px * 4); }
+div.bs-offer-list-item__content__offer__left__bottom__icons__avatar { height: calc(4px * 3); width: calc(4px * 3); }
+.bs-offer-list-item__content__offer__left__bottom__names { font-style: normal; font-weight: 400; font-size: 1rem; line-height: 1.5; display: flex; flex-direction: column; align-items: start; justify-content: space-between; align-items: flex-start; color: #7a746f; }
+.bs-offer-list-item__content__offer__right { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; }
+.bs-offer-list-item__content__offer__right__top { font-size: var(--body-fontSize); font-weight: 500; color: #7a746f; display: flex; gap: calc(4px * 2); justify-content: flex-end; }
+.bs-offer-list-item__content__offer__right__top__left { flex-wrap: wrap-reverse; display: flex; align-items: center; justify-content: flex-end; gap: calc(4px * 2); font-size: 1rem; line-height: 1.75; font-weight: 500; }
+.bs-offer-list-item__content__offer__right__top__group { display: flex; gap: 4px; align-items: center; }
+.bs-offer-list-item__content__offer__right__top__group__icon { width: 16px; height: 16px; color: #7a746f; }
+.bs-offer-list-item__content__offer__right__top__gender__icon { width: 12px; height: 12px; color: #7a746f; }
+.bs-offer-list-item__content__offer__right__top__gender { display: flex; gap: 4px; }
+.bs-offer-list-item__content__offer__right__top__gender__sex { display: flex; gap: 4px; }
+.bs-offer-list-item___content__offer__right__top__level { display: flex; height: calc(4px * 3); }
+.bs-offer-list-item___content__offer__right__top__icon { width: calc(4px * 2); height: calc(4px * 2); color: #7a746f; }
+.bs-offer-list-item__content__offer__right__bottom { margin-top: auto; }
+.bs-offer-list-item__content__offer__right__top__icon--not-disabled:hover { color: #9e9e9e; cursor: pointer; }
+.bs-offer-list-item__content__offer__right__top__icon--disabled { color: rgba(0, 0, 0, 0.26); }
+.bs-offer-list-item__content__offer__right__top__left--none { display: none; }
+.bs-offer-list-item__content__offer__left__extra { display: flex; gap: calc(4px * 2); font-size: 0.875rem; line-height: 1.43; color: #7a746f; font-weight: 500; }
+.bs-offer-list-item__content__offer__left__extra--not-displayed { display: none; }
 
-.bs-card-offer__content__title--time-highlighted {
-  padding-top: 0;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.75;
-  grid-column: 1 / 4;
-  grid-row: 2 / 2;
-}
-
-.bs-card-offer__content__title--coach-highlighted {
-  padding-top: 0;
-  font-weight: 400;
-  order: -1;
-  font-family: Helvetica, sans-serif, Roboto, Arial;
-  font-size: 0.875rem;
-  line-height: 1.43;
-}
-
-.bs-card-offer__content__time {
-  align-self: flex-start;
-  font-style: normal;
-  font-family: Helvetica, sans-serif, Roboto, Arial;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.43;
-  grid-column: 1 / 4;
-  grid-row: 2 / last;
-  text-align: left;
-  display: flex;
-  align-items: center;
-}
-
-.bs-card-offer__content__time__offer-hours {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-.bs-card-offer__content__time__offer-hours__start-time {
-}
-
-.bs-card-offer__content__time__offer-hours__time-separator {
-}
-
-.bs-card-offer__content__time__offer-hours__end-time-duration {
-}
-
-.bs-card-offer__content__status-chip {
-  display: flex;
-  grid-column: 4 / last;
-  grid-row: 2 / 2;
-  justify-content: flex-end;
-}
-
-.bs-card-offer__content__time--time-highlighted {
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.75;
-  grid-column: 1 / last;
-  grid-row: 1 / 2;
-  gap: 4px;
-}
-
-.bs-card-offer__content__time--coach-highlighted {
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.43;
-  order: -2;
-}
-
-.bs-card-offer__content__status {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 4px;
-  width: 102%;
-}
-
-.bs-card-offer__content__status__level {
-  justify-content: center;
-  align-items: center;
-  padding: 0px 4px;
-  display: flex;
-}
-
-.bs-card-offer__content__establishment {
-  font-family: Helvetica, sans-serif, Roboto, Arial;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.43;
-  font-size: 0.875rem;
-  align-self: flex-start;
-  color: #7a746f;
-  text-align: left;
-  display: none !important;
-}
-
-.bs-card-offer__content__coach {
-  font-family: Helvetica, sans-serif, Roboto, Arial;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.43;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.4px;
-  gap: 4px;
-  color: #7a746f;
-  justify-content: space-between;
-}
-
-.bs-card-offer__content__coach--coach-highlighted {
-  font-weight: 500;
-  line-height: 1.5;
-  color: #3d3835;
-  font-size: 1rem;
-  justify-content: start;
-  order: -3;
-}
-
-.bs-card-offer__content__coach__name {
-  display: flex;
-  align-items: center;
-  text-align: left;
-}
-
-.bs-card-offer__content__coach__name--coach-highlighted {
-  order: 1;
-}
-
-.bs-card-offer__content__coach__avatar {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-}
-
-.bs-card-offer__bottom {
-  padding-bottom: 10px;
-  padding-top: 10px;
-  border-top: 2px solid #e8e2dc;
-  width: 100%;
-}
-
-.bs-card-offer__bottom__content {
-  margin-left: calc(4px * 2);
-  margin-right: calc(4px * 2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4px;
-  flex-wrap: wrap;
-}
-
-.bs-card-offer__bottom__content--full {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: calc(4px / 2);
-}
-
-.bs-card-offer__content__bottom__left {
-  display: flex;
-  flex-direction: column;
-  gap: calc(4px / 2);
-  font-family: var(--subtitle1-fontFamily);
-  font-style: normal;
-  font-size: 0.875rem;
-  line-height: 1.57;
-  font-weight: 500;
-  color: #7a746f;
-}
-
-.bs-card-offer__content__bottom__left--full {
-  flex-direction: row;
-  gap: calc(4px * 2);
-}
-
-.bs-card-offer__content__bottom__left__gender {
-  display: flex;
-  gap: calc(4px / 2);
-  align-items: center;
-}
-
-.bs-card-offer__content__bottom__left__gender__sex {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
-
-.bs-card-offer__content__bottom__left__gender__other {
-  display: flex;
-  align-items: center;
-}
-
-.bs-card-offer__content__bottom__left__group {
-  display: flex;
-  align-items: center;
-  gap: calc(4px / 2);
-  color: #7a746f;
-}
-
-.bs-card-offer__content__bottom__left__group__icon {
-  width: calc(4px * 2);
-  height: calc(4px * 2);
-}
-
-.bs-card-offer__content__bottom__buttonContainer {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.bs-card-offer__content__bottom__left__group__number {
-  height: calc(4px * 2);
-  align-items: center;
-  letter-spacing: -0.5px;
-  display: flex;
-}
-
-svg.bs-card-offer__icon {
-  width: 16px;
-  height: 16px;
-}
-
-.bs-card-offer__content__bottom__button {
-  font-family: Helvetica, sans-serif, Roboto, Arial;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.75;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  color: #9a6548;
-  background: #fafafa;
-  border: none;
-}
-
-@media (max-width: 1700px) {
-  .bs-card-offer__content {
-    margin-left: 4px;
-    margin-right: 4px;
-  }
-  .bs-card-offer__bottom__content {
-    margin-left: 4px;
-    margin-right: 4px;
-  }
+@media only screen and (max-width: 500px) {
+  .bs-offer-list-item__content__offer { flex-direction: column; gap: calc(4px * 2); }
+  .bs-offer-list-item__content__offer__right { flex-direction: row; }
+  .bs-offer-list-item__content__offer__right__top__left { gap: 4px; justify-content: flex-start; }
+  .bs-offer-list-item__content { margin-left: 4px; margin-bottom: 4px; margin-right: 4px; }
+  .bs-offer-list-item__content__offer__left__establishment__name { font-size: 0.875rem; line-height: 1.43; }
+  .bs-offer-list-item__content__offer__left__coach { font-size: 0.875rem; line-height: 1.43; min-width: 100%; }
+  .bs-offer-list-item__content__offer__left__time { font-weight: 500; font-size: 0.875rem; line-height: 1.57; display: flex; }
+  .bs-offer-list-item__content__offer__left__time--time-highlighted { font-size: 1.125rem; line-height: 1.6; white-space: nowrap; }
+  .bs-offer-list-item__content__offer__left__title { font-weight: 500; font-size: 1.125rem; line-height: 1.6; }
+  .bs-offer-list-item__content__offer__left__title--time-highlighted { font-size: 0.875rem; line-height: 1.57; }
+  .bs-offer-list-item__content__offer__left__coach--coach-highlighted { order: -2; font-weight: 500; font-size: 1.125rem; color: #3d3835; line-height: 1.6; }
 }
