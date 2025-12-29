@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import BsportWidget from "@/components/BsportWidget";
 
 const BookingSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -12,7 +13,7 @@ const BookingSection = () => {
       }`}
     >
       <div className="container">
-        <div className="text-center max-w-xl mx-auto">
+        <div className="text-center max-w-xl mx-auto mb-10">
           <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
             Kurse
           </span>
@@ -23,6 +24,7 @@ const BookingSection = () => {
             Wähle deinen gewünschten Termin direkt im Kalender
           </p>
         </div>
+        <BsportWidget />
       </div>
     </section>
   );
