@@ -132,27 +132,19 @@ const PricingSection = () => {
           </div>
         </div>
 
-        {/* Booking Widget with Blur Overlay */}
-        <div className="relative">
-          <div
-            id="booking"
-            className="bg-white rounded-2xl p-10 md:p-14 shadow-soft text-center blur-sm pointer-events-none select-none"
-          >
-            <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
-              Kurse
-            </span>
-            <h3 className="font-heading text-2xl md:text-3xl mb-3">Kurs buchen</h3>
-            <p className="text-muted-foreground mb-6">
-              Wähle deinen gewünschten Termin direkt im Kalender
-            </p>
-            <BsportWidget />
-          </div>
-          {/* Overlay Text */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="bg-primary/90 text-white px-8 py-4 rounded-xl text-xl md:text-2xl font-heading font-semibold shadow-large">
-              Wird bald freigeschaltet!
-            </span>
-          </div>
+        {/* Booking Widget */}
+        <div
+          id="booking"
+          className="bg-white rounded-2xl p-10 md:p-14 shadow-soft text-center"
+        >
+          <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
+            Kurse
+          </span>
+          <h3 className="font-heading text-2xl md:text-3xl mb-3">Kurs buchen</h3>
+          <p className="text-muted-foreground mb-6">
+            Wähle deinen gewünschten Termin direkt im Kalender
+          </p>
+          <BsportWidget />
         </div>
       </div>
     </section>
