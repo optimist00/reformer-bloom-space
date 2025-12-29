@@ -111,10 +111,10 @@ const Hero = () => {
 
         {/* Right side - Image (1/3) */}
         <div className="w-1/3 relative">
-          <img 
+        <img 
             src={heroImage} 
             alt="House of Pilates Dresden Studio" 
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover scale-[0.8]"
             style={{ objectPosition: '62.5% center' }}
           />
           {/* Brown tint overlay */}
