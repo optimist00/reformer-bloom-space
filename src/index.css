@@ -241,3 +241,350 @@
 .animate-bounce-arrow {
   animation: bounce-arrow 2s infinite;
 }
+
+/* ================================ */
+/* Bsport Marketplace Card Offer Styles */
+/* ================================ */
+.bs-card-offer {
+  background: #ffffff;
+  border-radius: calc(6px * 3);
+  border-color: #e8e2dc;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1px;
+  padding: 0 !important;
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bs-card-offer:hover:enabled {
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+.--disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.bs-card-offer__activity-indicator {
+  position: absolute;
+  right: -40px;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid;
+}
+
+.bs-card-offer__content {
+  padding-top: 4px;
+  display: flex;
+  margin-left: calc(4px * 2);
+  margin-right: calc(4px * 2);
+  margin-bottom: calc(4px * 2);
+  flex-direction: column;
+  color: #3d3835;
+  gap: 4px;
+  flex-grow: 2;
+  width: stretch;
+}
+
+.bs-card-offer__content__top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 2;
+  flex-basis: 100%;
+}
+
+.bs-card-offer__content__top__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr auto;
+}
+
+.bs-card-offer__button__title {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  color: #3d3835;
+}
+
+.bs-card-offer__button__title:disabled {
+  background: transparent;
+}
+
+.bs-card-offer__content__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: left;
+  align-self: flex-start;
+  letter-spacing: 0.15px;
+  grid-column: 1 / last;
+  grid-row: 1 / 2;
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+}
+
+.bs-card-offer__content__title--ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bs-card-offer__content__title--time-highlighted {
+  padding-top: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75;
+  grid-column: 1 / 4;
+  grid-row: 2 / 2;
+}
+
+.bs-card-offer__content__title--coach-highlighted {
+  padding-top: 0;
+  font-weight: 400;
+  order: -1;
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.bs-card-offer__content__time {
+  align-self: flex-start;
+  font-style: normal;
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  grid-column: 1 / 4;
+  grid-row: 2 / last;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.bs-card-offer__content__time__offer-hours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.bs-card-offer__content__time__offer-hours__start-time {
+}
+
+.bs-card-offer__content__time__offer-hours__time-separator {
+}
+
+.bs-card-offer__content__time__offer-hours__end-time-duration {
+}
+
+.bs-card-offer__content__status-chip {
+  display: flex;
+  grid-column: 4 / last;
+  grid-row: 2 / 2;
+  justify-content: flex-end;
+}
+
+.bs-card-offer__content__time--time-highlighted {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.75;
+  grid-column: 1 / last;
+  grid-row: 1 / 2;
+  gap: 4px;
+}
+
+.bs-card-offer__content__time--coach-highlighted {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  order: -2;
+}
+
+.bs-card-offer__content__status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 4px;
+  width: 102%;
+}
+
+.bs-card-offer__content__status__level {
+  justify-content: center;
+  align-items: center;
+  padding: 0px 4px;
+  display: flex;
+}
+
+.bs-card-offer__content__establishment {
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.43;
+  font-size: 0.875rem;
+  align-self: flex-start;
+  color: #7a746f;
+  text-align: left;
+  display: none !important;
+}
+
+.bs-card-offer__content__coach {
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.4px;
+  gap: 4px;
+  color: #7a746f;
+  justify-content: space-between;
+}
+
+.bs-card-offer__content__coach--coach-highlighted {
+  font-weight: 500;
+  line-height: 1.5;
+  color: #3d3835;
+  font-size: 1rem;
+  justify-content: start;
+  order: -3;
+}
+
+.bs-card-offer__content__coach__name {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.bs-card-offer__content__coach__name--coach-highlighted {
+  order: 1;
+}
+
+.bs-card-offer__content__coach__avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.bs-card-offer__bottom {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-top: 2px solid #e8e2dc;
+  width: 100%;
+}
+
+.bs-card-offer__bottom__content {
+  margin-left: calc(4px * 2);
+  margin-right: calc(4px * 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.bs-card-offer__bottom__content--full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(4px / 2);
+}
+
+.bs-card-offer__content__bottom__left {
+  display: flex;
+  flex-direction: column;
+  gap: calc(4px / 2);
+  font-family: var(--subtitle1-fontFamily);
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.57;
+  font-weight: 500;
+  color: #7a746f;
+}
+
+.bs-card-offer__content__bottom__left--full {
+  flex-direction: row;
+  gap: calc(4px * 2);
+}
+
+.bs-card-offer__content__bottom__left__gender {
+  display: flex;
+  gap: calc(4px / 2);
+  align-items: center;
+}
+
+.bs-card-offer__content__bottom__left__gender__sex {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.bs-card-offer__content__bottom__left__gender__other {
+  display: flex;
+  align-items: center;
+}
+
+.bs-card-offer__content__bottom__left__group {
+  display: flex;
+  align-items: center;
+  gap: calc(4px / 2);
+  color: #7a746f;
+}
+
+.bs-card-offer__content__bottom__left__group__icon {
+  width: calc(4px * 2);
+  height: calc(4px * 2);
+}
+
+.bs-card-offer__content__bottom__buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bs-card-offer__content__bottom__left__group__number {
+  height: calc(4px * 2);
+  align-items: center;
+  letter-spacing: -0.5px;
+  display: flex;
+}
+
+svg.bs-card-offer__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.bs-card-offer__content__bottom__button {
+  font-family: Helvetica, sans-serif, Roboto, Arial;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #9a6548;
+  background: #fafafa;
+  border: none;
+}
+
+@media (max-width: 1700px) {
+  .bs-card-offer__content {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .bs-card-offer__bottom__content {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
