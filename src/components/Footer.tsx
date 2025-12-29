@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const hours = [
-    { day: "Mo - Fr", time: "07:00 - 21:00" },
-    { day: "Samstag", time: "09:00 - 14:00" },
+    { day: "Mo - Fr", time: "08:00 - 16:00" },
+    { day: "Samstag", time: "10:00 - 14:00" },
     { day: "Sonntag", time: "Geschlossen" },
   ];
 
@@ -36,11 +36,11 @@ const Footer = () => {
             <h4 className="font-heading text-lg text-white mb-5">Kontakt</h4>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:info@houseofpilates-dresden.de"
+                href="mailto:info@houseofpilatesdresden.de"
                 className="flex items-center gap-2 text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all"
               >
                 <Mail className="w-4 h-4" />
-                info@houseofpilates-dresden.de
+                info@houseofpilatesdresden.de
               </a>
               <a
                 href="tel:+4915229256804"
@@ -50,20 +50,20 @@ const Footer = () => {
                 0152 29256804
               </a>
               <a
-                href="https://maps.google.com/?q=Musterstraße+123,+01099+Dresden"
+                href="https://maps.google.com/?q=Heinrichstr.+2,+01097+Dresden"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all"
               >
                 <MapPin className="w-4 h-4" />
-                Musterstraße 123, 01099 Dresden
+                Heinrichstr. 2, 01097 Dresden
               </a>
             </div>
           </div>
 
           {/* Hours */}
           <div>
-            <h4 className="font-heading text-lg text-white mb-5">Öffnungszeiten</h4>
+            <h4 className="font-heading text-lg text-white mb-5">Erreichbarkeit</h4>
             <ul className="space-y-3">
               {hours.map((item, index) => (
                 <li
