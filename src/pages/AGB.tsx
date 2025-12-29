@@ -102,10 +102,8 @@ const AGB = () => {
               <h2 className="font-heading text-2xl text-foreground mb-4">
                 § 5 Stornierung und „No-Show" (6-Stunden-Regel)
               </h2>
-              <p>
-                (1) Eine kostenfreie Stornierung gebuchter Termine ist bis 6 Stunden vor Kursbeginn über das BSPORT SAS-System möglich. In diesem Fall wird das Guthaben (z.B. der Punkt auf der 10er-Karte) wieder gutgeschrieben.
-              </p>
-              <p>(2) Bei einer Stornierung weniger als 6 Stunden vor Beginn oder bei Nichterscheinen („No-Show") wird die Einheit voll berechnet bzw. von der Karte abgezogen. Bei Einzelkarten verfällt der gezahlte Betrag.</p>
+              <p>(1) Eine kostenfreie Stornierung gebuchter Termine ist bis 12 Stunden vor Kursbeginn über das BSPORT SAS-System möglich. In diesem Fall wird das Guthaben (z.B. der Punkt auf der 10er-Karte) wieder gutgeschrieben.</p>
+              <p>(2) Bei einer Stornierung weniger als 12 Stunden vor Beginn oder bei Nichterscheinen („No-Show") wird die Einheit voll berechnet bzw. von der Karte abgezogen. Bei Einzelkarten verfällt der gezahlte Betrag.</p>
               <p>
                 (3) Dem Teilnehmer bleibt der Nachweis gestattet, dass dem Studio kein oder ein wesentlich geringerer Schaden entstanden ist (z.B. wenn der Platz noch kurzfristig anderweitig vergeben werden konnte).
               </p>
