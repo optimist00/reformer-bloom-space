@@ -15,7 +15,7 @@ declare global {
         config: {
           calendar: {
             todayOnly: boolean;
-            compactMode: boolean;
+            compactMode: boolean | null;
           };
         };
       }) => void;
@@ -41,7 +41,7 @@ const BsportWidget = () => {
         return;
       }
       window.BsportWidget.mount({
-        parentElement: "bsport-widget-818198",
+        parentElement: "bsport-widget-504100",
         companyId: 5314,
         franchiseId: null,
         dialogMode: 1,
@@ -52,7 +52,7 @@ const BsportWidget = () => {
         config: {
           calendar: {
             todayOnly: false,
-            compactMode: false,
+            compactMode: null,
           },
         },
       });
@@ -63,7 +63,7 @@ const BsportWidget = () => {
 
   return (
     <div className="w-full min-h-[400px]">
-      <div id="bsport-widget-818198" className="w-full" />
+      <div id="bsport-widget-504100" className="w-full" />
     </div>
   );
 };
