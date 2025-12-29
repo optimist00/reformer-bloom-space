@@ -115,7 +115,6 @@ const Hero = () => {
             src={heroImage} 
             alt="House of Pilates Dresden Studio" 
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: '62.5% center' }}
           />
           {/* Brown tint overlay */}
           <div className="absolute inset-0 bg-earth/35" />
