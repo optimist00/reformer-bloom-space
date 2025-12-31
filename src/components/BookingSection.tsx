@@ -26,9 +26,10 @@ const BookingSection = () => {
             Wähle deinen gewünschten Termin direkt im Kalender
           </p>
           <Link to="/stundenplan">
-            <Button variant="cta" size="lg" className="group">
-              Schaue dir jetzt den Stundenplan an
-              <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+            <Button variant="cta" size="lg" className="group text-sm md:text-base px-6 md:px-9">
+              <span className="md:hidden">Zum Stundenplan</span>
+              <span className="hidden md:inline">Schaue dir jetzt den Stundenplan an</span>
+              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>
         </div>
