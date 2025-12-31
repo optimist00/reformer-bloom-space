@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const highlights = [
   "6 Premium Reformer",
-  "Intime Gruppen bis 6 Personen",
+  "Begrenzte Gruppen bis 6 Personen",
   "Lichtdurchflutete Räume",
   "Zentral in Dresden",
 ];
