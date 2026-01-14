@@ -115,6 +115,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-5 pt-8 text-sm opacity-70">
           <p>© 2024 House of Pilates Dresden. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
+            <Link to="/app" className="hover:opacity-100 transition-opacity">
+              App
+            </Link>
             <Link to="/impressum" className="hover:opacity-100 transition-opacity">
               Impressum
             </Link>
