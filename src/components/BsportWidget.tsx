@@ -59,46 +59,6 @@ const BsportWidget = () => {
     };
 
     mountWidget();
-
-    // Dynamische Farben für Level-Badges
-    const levelColorInterval = setInterval(() => {
-      const levels = document.querySelectorAll('.bs-card-offer__content__status__level');
-      levels.forEach((level: Element) => {
-        const el = level as HTMLElement;
-        const text = el.textContent?.trim();
-        
-        if (text === 'Alle Niveaus') {
-          el.style.backgroundColor = '#4A90E2';
-          el.style.color = 'white';
-        } else if (text === 'Einsteiger') {
-          el.style.backgroundColor = '#C8E6C9';
-          el.style.color = '#333333';
-        } else if (text === 'Mittelstufe') {
-          el.style.backgroundColor = '#FFE0B2';
-          el.style.color = '#333333';
-        } else if (text === 'Profi') {
-          el.style.backgroundColor = '#FFCDD2';
-          el.style.color = '#333333';
-        }
-      });
-    }, 500);
-
-    // Bsport Logo entfernen
-    const logoRemovalInterval = setInterval(() => {
-      const bsportLinks = document.querySelectorAll('a[href*="bsport.io"]');
-      bsportLinks.forEach(link => {
-        if (link.parentElement) {
-          (link.parentElement as HTMLElement).style.display = 'none';
-        }
-        link.remove();
-      });
-    }, 500);
-
-    // Cleanup beim Unmount
-    return () => {
-      clearInterval(levelColorInterval);
-      clearInterval(logoRemovalInterval);
-    };
   }, []);
 
   return (
