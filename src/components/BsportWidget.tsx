@@ -59,6 +59,33 @@ const BsportWidget = () => {
     };
 
     mountWidget();
+
+    // Remove bsport branding logo
+    const removeBsportBranding = () => {
+      const bsportLinks = document.querySelectorAll('a[href*="bsport.io"]');
+      bsportLinks.forEach(link => {
+        const parent = link.parentElement;
+        if (parent) {
+          parent.style.display = 'none';
+        }
+        link.remove();
+      });
+      
+      const bsportImages = document.querySelectorAll('img[src*="bsport_logo"], img[alt="bsport"]');
+      bsportImages.forEach(img => {
+        const parent = img.parentElement;
+        if (parent) {
+          parent.style.display = 'none';
+        }
+        img.remove();
+      });
+    };
+
+    const brandingInterval = setInterval(removeBsportBranding, 500);
+
+    return () => {
+      clearInterval(brandingInterval);
+    };
   }, []);
 
   return (
