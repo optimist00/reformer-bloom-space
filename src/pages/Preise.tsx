@@ -35,15 +35,23 @@ const Preise = () => {
         <section className="mb-12">
           <div className="text-center mb-8 px-4 max-w-2xl mx-auto">
             <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
-              Nur für Neukunden
+              Exklusiv für Neukunden
             </span>
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
               Discovery Package
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Reformer-Sessions plus unsere Signature Grip Socks als Willkommensgeschenk. 
-              Buchbar nur bei deiner ersten Buchung.
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              3 Reformer-Sessions + unsere Signature Grip Socks als Willkommensgeschenk. Nur bei der ersten Buchung!
             </p>
+            <a 
+              href="https://backoffice.bsport.io/login/customer?membership=5314" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button variant="cta" size="lg">
+                Jetzt Konto erstellen
+              </Button>
+            </a>
           </div>
         </section>
 
