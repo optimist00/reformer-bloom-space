@@ -41,7 +41,12 @@ const Preise = () => {
               Discovery Package
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              3 Reformer-Sessions + unsere Signature Grip Socks als Willkommensgeschenk. Nur bei der ersten Buchung!
+              Starte mit 3 Reformer-Sessions inkl. Signature Grip Socks.{" "}
+              <span className="font-semibold text-earth-dark">69€</span>{" "}
+              <span className="line-through text-muted-foreground/60">96,99€</span>
+              {" "}· Nur <span className="font-semibold">20€ pro Session</span>.
+              <br />
+              <span className="text-sm">Einmalig für Neukunden.</span>
             </p>
             <a 
               href="https://backoffice.bsport.io/login/customer?membership=5314" 
