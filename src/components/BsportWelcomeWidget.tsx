@@ -40,35 +40,6 @@ const BsportWelcomeWidget = () => {
     };
 
     mountWidget();
-
-    // Remove bsport branding logo (only the "Powered by" footer, not functional dialogs)
-    const removeBsportBranding = () => {
-      // Only target the specific "Powered by bsport" branding link with logo
-      const bsportLinks = document.querySelectorAll('a[href*="pro.bsport.io"][href*="utm_source=widget"]');
-      bsportLinks.forEach(link => {
-        const parent = link.parentElement;
-        if (parent) {
-          (parent as HTMLElement).style.display = 'none';
-        }
-        (link as HTMLElement).style.display = 'none';
-      });
-      
-      // Only target bsport logo images, not other functional images
-      const bsportImages = document.querySelectorAll('img[src*="bsport_logo"]');
-      bsportImages.forEach(img => {
-        const parent = img.parentElement;
-        if (parent) {
-          (parent as HTMLElement).style.display = 'none';
-        }
-        (img as HTMLElement).style.display = 'none';
-      });
-    };
-
-    const brandingInterval = setInterval(removeBsportBranding, 500);
-
-    return () => {
-      clearInterval(brandingInterval);
-    };
   }, []);
 
   return (
