@@ -19,8 +19,8 @@ const passes: PassCard[] = [
   },
   {
     name: "10er Karte",
-    price: "250,00 €",
-    pricePerSession: "25€ pro Session",
+    price: "260,00 €",
+    pricePerSession: "26€ pro Session",
     validFor: "6 Monate gültig",
   },
 ];
