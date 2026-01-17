@@ -37,7 +37,8 @@ const Preise = () => {
               Starte mit 3 Reformer-Sessions inkl. Signature Grip Socks.{" "}
               <span className="font-semibold text-earth-dark">69€</span>{" "}
               <span className="line-through text-muted-foreground/60">96,99€</span>
-              {" "}· Nur <span className="font-semibold">20€ pro Session</span>.
+              <br />
+              Nur <span className="font-semibold">20€ pro Session</span>.
               <br />
               <span className="text-sm">Einmalig für Neukunden.</span>
             </p>
