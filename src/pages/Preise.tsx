@@ -82,6 +82,8 @@ const Preise = () => {
             <ul className="text-muted-foreground leading-relaxed space-y-1 text-left inline-block mb-4">
               <li>• <span className="font-semibold text-earth-dark">Priority Booking:</span> Buche 1 Woche vor allen anderen</li>
               <li>• Einladung zu exklusiven Community Events</li>
+              <li>• Flexible Stornierung bis 6h vor Kursbeginn</li>
+              <li>• <span className="font-semibold text-earth-dark">Wartelisten-Priorität:</span> Bei ausgebuchten Kursen automatisch vorne</li>
             </ul>
             <p className="text-xs text-muted-foreground/70">
               Keine versteckten Kosten · Jederzeit monatlich kündbar.
