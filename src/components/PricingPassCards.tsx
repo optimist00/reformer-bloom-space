@@ -22,7 +22,7 @@ const passes: PassCard[] = [
   },
   {
     name: "10er Karte",
-    tagline: "Volle Freiheit ohne Vertragsbindung",
+    tagline: "Flexibel & ungebunden",
     price: "250,00 €",
     pricePerSession: "25€ pro Session",
     validFor: "6 Monate gültig",
