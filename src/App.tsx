@@ -8,7 +8,6 @@ import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import AGB from "./pages/AGB";
 import Stundenplan from "./pages/Stundenplan";
-import Preise from "./pages/Preise";
 import AppPage from "./pages/App";
 import NotFound from "./pages/NotFound";
 
@@ -26,7 +25,6 @@ const App = () => (
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/agb" element={<AGB />} />
           <Route path="/stundenplan" element={<Stundenplan />} />
-          <Route path="/preise" element={<Preise />} />
           <Route path="/app" element={<AppPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
