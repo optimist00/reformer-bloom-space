@@ -1,15 +1,9 @@
-import { ArrowLeft, Check } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PricingPassCards from "@/components/PricingPassCards";
 import PricingMembershipCards from "@/components/PricingMembershipCards";
 const Preise = () => {
-  const membershipBenefits = [
-    "Priority Booking: Buche 1 Woche vor allen anderen",
-    "10% Rabatt auf unseren Shop",
-    "Einladung zu exklusiven Community Events",
-  ];
-
   return (
     <div className="min-h-screen bg-cream">
       {/* Header */}
@@ -79,24 +73,17 @@ const Preise = () => {
         <section className="py-12">
           <div className="text-center mb-8 px-4 max-w-2xl mx-auto">
             <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
-              Exklusive Vorteile
+              Monatlich
             </span>
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
               Memberships
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Trainiere unbegrenzt und genieße exklusive Vorteile als Mitglied unserer Community.
+            <p className="text-muted-foreground leading-relaxed mb-2">
+              <span className="font-semibold text-earth-dark">Priority Booking:</span> Buche 1 Woche vor allen anderen.
             </p>
-            <ul className="inline-flex flex-col items-start gap-3 text-left">
-              {membershipBenefits.map((benefit, index) => (
-                <li key={index} className="flex items-center gap-3 text-earth-dark">
-                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-sage/20 flex items-center justify-center">
-                    <Check className="w-3 h-3 text-sage" />
-                  </span>
-                  <span className="text-sm md:text-base">{benefit}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="text-muted-foreground leading-relaxed">
+              Einladung zu exklusiven Community Events.
+            </p>
           </div>
           <PricingMembershipCards />
         </section>
