@@ -18,8 +18,8 @@ const pricingPlans = [
   },
   {
     name: "10er Karte",
-    description: "25€ pro Session",
-    price: "250",
+    description: "26€ pro Session",
+    price: "260",
     features: [
       "10 Trainingseinheiten",
       "6 Monate Gültigkeit",
