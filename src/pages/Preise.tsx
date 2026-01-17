@@ -1,7 +1,6 @@
 import { ArrowLeft, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import BsportWelcomeWidget from "@/components/BsportWelcomeWidget";
 import BsportPassWidget from "@/components/BsportPassWidget";
 import BsportSubscriptionWidget from "@/components/BsportSubscriptionWidget";
 
@@ -41,15 +40,11 @@ const Preise = () => {
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
               Discovery Package
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed">
               Reformer-Sessions plus unsere Signature Grip Socks als Willkommensgeschenk. 
               Buchbar nur bei deiner ersten Buchung.
             </p>
-            <p className="text-earth-dark font-medium mb-4">
-              Jetzt Account erstellen:
-            </p>
           </div>
-          <BsportWelcomeWidget />
         </section>
 
         {/* Kurspässe Section */}
