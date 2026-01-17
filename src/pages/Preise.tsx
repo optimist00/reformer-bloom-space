@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PricingPassCards from "@/components/PricingPassCards";
 import PricingMembershipCards from "@/components/PricingMembershipCards";
+
 const Preise = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-cream">
       {/* Header */}
