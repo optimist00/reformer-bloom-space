@@ -36,30 +36,30 @@ const PricingPassCards = () => {
         {passes.map((pass, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl p-6 border border-earth/10"
+            className="relative bg-white rounded-xl p-6 border border-earth/10"
           >
-            <h3 className="font-heading text-lg font-semibold text-earth-dark mb-1">
+            <span className="absolute top-4 right-4 text-xs text-sage bg-sage/10 px-2 py-1 rounded-md font-medium">
+              {pass.validFor}
+            </span>
+            
+            <h3 className="font-heading text-lg font-semibold text-earth-dark mb-1 pr-20">
               {pass.name}
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
               {pass.tagline}
             </p>
 
-            <div className="mb-2">
+            <div className="mb-1">
               <span className="text-2xl font-heading font-semibold text-earth-dark">
                 {pass.price}
               </span>
             </div>
             
             {pass.pricePerSession && (
-              <p className="text-sm text-sage font-medium mb-3">
+              <p className="text-sm text-sage font-medium">
                 {pass.pricePerSession}
               </p>
             )}
-
-            <p className="text-xs text-muted-foreground">
-              {pass.validFor}
-            </p>
           </div>
         ))}
       </div>
