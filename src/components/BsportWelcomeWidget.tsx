@@ -18,22 +18,18 @@ const BsportWelcomeWidget = () => {
         return;
       }
       (window as any).BsportWidget.mount({
-        parentElement: "bsport-widget-685053",
+        parentElement: "bsport-widget-502765",
         companyId: 5314,
         franchiseId: null,
         dialogMode: 1,
-        widgetType: "pass",
+        widgetType: "loginButton",
+        language: "de",
         showFab: false,
         fullScreenPopup: false,
         styles: undefined,
         config: {
-          pass: {
-            paymentPackCategories: [],
-            privatePassCategories: [],
-            hidePaymentCombo: false,
-            hidePaymentPack: true,
-            hideFilters: true,
-            hidePrivatePass: true,
+          loginButton: {
+            openMemberProfile: true,
           },
         },
       });
@@ -43,8 +39,8 @@ const BsportWelcomeWidget = () => {
   }, []);
 
   return (
-    <div className="w-full">
-      <div id="bsport-widget-685053" className="w-full" />
+    <div className="w-full flex justify-center">
+      <div id="bsport-widget-502765" />
     </div>
   );
 };
