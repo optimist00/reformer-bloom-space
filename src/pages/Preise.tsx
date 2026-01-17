@@ -85,6 +85,30 @@ const Preise = () => {
           </div>
           <PricingMembershipCards />
         </section>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-beige/30">
+          <div className="text-center px-4 max-w-xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-3">
+              Bereit für deine Transformation?
+            </h2>
+            <p className="text-muted-foreground mb-6">
+              Sichere dir jetzt deinen Platz – unsere Kurse sind schnell ausgebucht.
+            </p>
+            <a 
+              href="https://backoffice.bsport.io/m/houseofpilates%20berlin/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button variant="cta" size="lg">
+                Jetzt Kurs buchen
+              </Button>
+            </a>
+            <p className="text-xs text-muted-foreground/70 mt-4">
+              Keine versteckten Kosten · Jederzeit kündbar
+            </p>
+          </div>
+        </section>
       </main>
     </div>
   );
