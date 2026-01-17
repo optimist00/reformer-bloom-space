@@ -36,13 +36,17 @@ const Preise = () => {
         <section className="mb-12">
           <div className="text-center mb-8 px-4 max-w-2xl mx-auto">
             <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
-              Neu bei uns?
+              Nur für Neukunden
             </span>
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
-              Dein Willkommensangebot
+              Discovery Package
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Entdecke House of Pilates zum ersten Mal – mit unserem exklusiven Kennenlernpaket zum Sonderpreis.
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Reformer-Sessions plus unsere Signature Grip Socks als Willkommensgeschenk. 
+              Buchbar nur bei deiner ersten Buchung.
+            </p>
+            <p className="text-earth-dark font-medium mb-4">
+              Jetzt Account erstellen:
             </p>
           </div>
           <BsportWelcomeWidget />
