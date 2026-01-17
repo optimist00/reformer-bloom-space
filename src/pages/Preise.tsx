@@ -96,7 +96,7 @@ const Preise = () => {
               Sichere dir jetzt deinen Platz – unsere Kurse sind schnell ausgebucht.
             </p>
             <a 
-              href="https://backoffice.bsport.io/login?membership=5314" 
+              href="https://backoffice.bsport.io/m/House%20of%20Pilates%20Dresden/5314/calendar/?isPreview=true&variant=time&groupSessionByPeriod=false" 
               target="_blank" 
               rel="noopener noreferrer"
             >
