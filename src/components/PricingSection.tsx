@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -72,7 +73,7 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Grid */}
-        <div className="grid md:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto mb-20">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto mb-10">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
@@ -122,6 +123,15 @@ const PricingSection = () => {
               </Button>
             </div>
           ))}
+        </div>
+
+        {/* CTA für weitere Optionen */}
+        <div className="text-center">
+          <Link to="/preise">
+            <Button variant="secondary" size="lg">
+              Weitere Optionen ansehen
+            </Button>
+          </Link>
         </div>
 
       </div>
