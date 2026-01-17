@@ -18,7 +18,7 @@ const BsportPassWidget = () => {
         return;
       }
       (window as any).BsportWidget.mount({
-        parentElement: "bsport-widget-712525",
+        parentElement: "bsport-widget-480891",
         companyId: 5314,
         franchiseId: null,
         dialogMode: 1,
@@ -30,6 +30,10 @@ const BsportPassWidget = () => {
           pass: {
             paymentPackCategories: [],
             privatePassCategories: [],
+            hidePaymentCombo: true,
+            hidePaymentPack: false,
+            hideFilters: true,
+            hidePrivatePass: true,
           },
         },
       });
@@ -40,7 +44,7 @@ const BsportPassWidget = () => {
 
   return (
     <div className="w-full">
-      <div id="bsport-widget-712525" className="w-full" />
+      <div id="bsport-widget-480891" className="w-full" />
     </div>
   );
 };
