@@ -78,12 +78,10 @@ const Preise = () => {
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
               Memberships
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-2">
-              <span className="font-semibold text-earth-dark">Priority Booking:</span> Buche 1 Woche vor allen anderen.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Einladung zu exklusiven Community Events.
-            </p>
+            <ul className="text-muted-foreground leading-relaxed space-y-1 text-left inline-block">
+              <li>• <span className="font-semibold text-earth-dark">Priority Booking:</span> Buche 1 Woche vor allen anderen</li>
+              <li>• Einladung zu exklusiven Community Events</li>
+            </ul>
           </div>
           <PricingMembershipCards />
         </section>
