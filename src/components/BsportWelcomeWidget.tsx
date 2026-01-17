@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const BsportSubscriptionWidget = () => {
+const BsportWelcomeWidget = () => {
   useEffect(() => {
     // Load the bsport CDN script if not already loaded
     if (!document.getElementById("bsport-widget-cdn")) {
@@ -18,16 +18,23 @@ const BsportSubscriptionWidget = () => {
         return;
       }
       (window as any).BsportWidget.mount({
-        parentElement: "bsport-widget-548230",
+        parentElement: "bsport-widget-685053",
         companyId: 5314,
         franchiseId: null,
         dialogMode: 1,
-        widgetType: "subscription",
+        widgetType: "pass",
         showFab: false,
         fullScreenPopup: false,
         styles: undefined,
         config: {
-          subscription: {},
+          pass: {
+            paymentPackCategories: [],
+            privatePassCategories: [],
+            hidePaymentCombo: false,
+            hidePaymentPack: true,
+            hideFilters: true,
+            hidePrivatePass: true,
+          },
         },
       });
     };
@@ -37,9 +44,9 @@ const BsportSubscriptionWidget = () => {
 
   return (
     <div className="w-full">
-      <div id="bsport-widget-548230" className="w-full" />
+      <div id="bsport-widget-685053" className="w-full" />
     </div>
   );
 };
 
-export default BsportSubscriptionWidget;
+export default BsportWelcomeWidget;
