@@ -1,9 +1,8 @@
 import { ArrowLeft, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import BsportPassWidget from "@/components/BsportPassWidget";
-import BsportSubscriptionWidget from "@/components/BsportSubscriptionWidget";
-
+import PricingPassCards from "@/components/PricingPassCards";
+import PricingMembershipCards from "@/components/PricingMembershipCards";
 const Preise = () => {
   const membershipBenefits = [
     "Priority Booking: Buche 1 Woche vor allen anderen",
@@ -73,7 +72,7 @@ const Preise = () => {
               Wähle den Pass, der zu deinem Trainingsrhythmus passt – ob Einzelstunde oder 10er Karte.
             </p>
           </div>
-          <BsportPassWidget />
+          <PricingPassCards />
         </section>
 
         {/* Memberships Section */}
@@ -99,7 +98,7 @@ const Preise = () => {
               ))}
             </ul>
           </div>
-          <BsportSubscriptionWidget />
+          <PricingMembershipCards />
         </section>
       </main>
     </div>
