@@ -79,10 +79,13 @@ const Preise = () => {
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
               Memberships
             </h2>
-            <ul className="text-muted-foreground leading-relaxed space-y-1 text-left inline-block">
+            <ul className="text-muted-foreground leading-relaxed space-y-1 text-left inline-block mb-4">
               <li>• <span className="font-semibold text-earth-dark">Priority Booking:</span> Buche 1 Woche vor allen anderen</li>
               <li>• Einladung zu exklusiven Community Events</li>
             </ul>
+            <p className="text-xs text-muted-foreground/70">
+              Keine versteckten Kosten · Jederzeit monatlich kündbar.
+            </p>
           </div>
           <PricingMembershipCards />
         </section>
@@ -105,9 +108,6 @@ const Preise = () => {
                 Jetzt Kurs buchen
               </Button>
             </a>
-            <p className="text-xs text-muted-foreground/70 mt-4">
-              Keine versteckten Kosten · Jederzeit kündbar
-            </p>
           </div>
         </section>
       </main>
