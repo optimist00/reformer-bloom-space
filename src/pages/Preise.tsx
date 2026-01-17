@@ -14,7 +14,7 @@ const Preise = () => {
       {/* Header */}
       <header className="bg-cream border-b border-earth/10 sticky top-0 z-50">
         <div className="container py-4 flex items-center justify-between">
-          <Link to="/">
+          <Link to="/#pricing">
             <Button variant="ghost" className="gap-2 text-earth-dark hover:text-primary">
               <ArrowLeft className="w-4 h-4" />
               Zurück zur Startseite
