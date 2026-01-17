@@ -42,7 +42,7 @@ const Preise = () => {
               <span className="text-sm">Einmalig für Neukunden.</span>
             </p>
             <a 
-              href="https://backoffice.bsport.io/login/customer?membership=5314" 
+              href="https://backoffice.bsport.io/login?membership=5314" 
               target="_blank" 
               rel="noopener noreferrer"
             >
@@ -96,7 +96,7 @@ const Preise = () => {
               Sichere dir jetzt deinen Platz – unsere Kurse sind schnell ausgebucht.
             </p>
             <a 
-              href="https://backoffice.bsport.io/m/houseofpilates%20berlin/" 
+              href="https://backoffice.bsport.io/login?membership=5314" 
               target="_blank" 
               rel="noopener noreferrer"
             >
