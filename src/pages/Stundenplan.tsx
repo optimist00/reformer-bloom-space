@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import BsportWidget from "@/components/BsportWidget";
 
 const Stundenplan = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-cream">
       {/* Header */}
@@ -31,6 +36,15 @@ const Stundenplan = () => {
           <p className="text-muted-foreground text-sm">
             Finde den passenden Termin und buche direkt online
           </p>
+          <a 
+            href="https://backoffice.bsport.io/login/customer?membership=5314"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="sm" variant="cta" className="mt-3">
+              Jetzt anmelden
+            </Button>
+          </a>
         </div>
         <BsportWidget />
       </main>
