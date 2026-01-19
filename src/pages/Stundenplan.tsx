@@ -36,12 +36,8 @@ const Stundenplan = () => {
           <p className="text-muted-foreground text-sm">
             Finde den passenden Termin und buche direkt online
           </p>
-          <a 
-            href="https://backoffice.bsport.io/login/customer?membership=5314"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button size="sm" variant="cta" className="mt-3">
+          <a href="https://backoffice.bsport.io/login/customer?membership=5314">
+            <Button size="sm" variant="secondary" className="mt-3">
               Jetzt anmelden
             </Button>
           </a>
