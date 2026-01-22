@@ -14,8 +14,14 @@ declare global {
         styles: undefined;
         config: {
           calendar: {
+            coaches: string[];
+            establishments: string[];
+            metaActivities: string[];
+            levels: string[];
+            variant: null;
+            groupSessionByPeriod: boolean;
             todayOnly: boolean;
-            compactMode: boolean | null;
+            compactMode: boolean;
           };
         };
       }) => void;
@@ -41,7 +47,7 @@ const BsportWidget = () => {
         return;
       }
       window.BsportWidget.mount({
-        parentElement: "bsport-widget-504100",
+        parentElement: "bsport-widget-274259",
         companyId: 5314,
         franchiseId: null,
         dialogMode: 1,
@@ -51,8 +57,14 @@ const BsportWidget = () => {
         styles: undefined,
         config: {
           calendar: {
+            coaches: [],
+            establishments: [],
+            metaActivities: [],
+            levels: [],
+            variant: null,
+            groupSessionByPeriod: true,
             todayOnly: false,
-            compactMode: null,
+            compactMode: true,
           },
         },
       });
@@ -63,7 +75,7 @@ const BsportWidget = () => {
 
   return (
     <div className="w-full min-h-[calc(100vh-120px)]">
-      <div id="bsport-widget-504100" className="w-full h-full" />
+      <div id="bsport-widget-274259" className="w-full h-full" />
     </div>
   );
 };
