@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Plus, Mail, Phone } from "lucide-react";
+import { Plus, Mail, Phone, Gift } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -103,6 +104,22 @@ const FAQSection = () => {
                 <Phone className="w-4 h-4 mr-2" />
                 Anrufen
               </a>
+            </Button>
+          </div>
+
+          {/* Gift Section */}
+          <div className="mt-12 pt-10 border-t border-stone text-center">
+            <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-primary mb-3">
+              Mache jemandem eine Freude.
+            </span>
+            <p className="text-muted-foreground mb-5">
+              Jetzt Reformer Kurs schenken:
+            </p>
+            <Button variant="cta" asChild>
+              <Link to="/gutscheine">
+                <Gift className="w-4 h-4 mr-2" />
+                Gutscheine entdecken
+              </Link>
             </Button>
           </div>
         </div>
