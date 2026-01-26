@@ -61,7 +61,7 @@ const Gutscheine = () => {
               <div className="bg-cream rounded-2xl p-6 shadow-soft text-center flex flex-col">
                 <p className="text-3xl font-heading font-bold text-primary mb-4">40€</p>
                 <p className="text-sm text-muted-foreground mb-6 flex-grow">
-                  Ein Geschenk-Gutschein in Höhe von 40€ mit dem zum Beispiel der Zugang zu einem Einzelkurs mit einem Paar unserer Grip-Socken erworben werden kann
+                  Zum Beispiel der Zugang zu einem Einzelkurs mit einem Paar unserer Grip-Socken
                 </p>
                 <Button variant="cta" asChild>
                   <a href="https://backoffice.bsport.io/checkout/5314/giftcard/18374/?force=true" target="_blank" rel="noopener noreferrer">
@@ -77,7 +77,7 @@ const Gutscheine = () => {
                 </span>
                 <p className="text-3xl font-heading font-bold text-primary mb-4">100€</p>
                 <p className="text-sm text-muted-foreground mb-6 flex-grow">
-                  Ein Geschenk-Gutschein in Höhe von 100€ mit dem zum Beispiel der Zugang zu 3 Kursen mit einem Paar unserer Grip-Socken erworben werden kann.
+                  Zum Beispiel der Zugang zu 3 Kursen mit einem Paar unserer Grip-Socken
                 </p>
                 <Button variant="cta" asChild>
                   <a href="https://backoffice.bsport.io/checkout/5314/giftcard/18376/?force=true" target="_blank" rel="noopener noreferrer">
