@@ -1,64 +1,67 @@
 
-## Gutschein-Sektion und Unterseite erstellen
+## Gutscheine-Seite mit echten Gutschein-Optionen aktualisieren
 
 ### Übersicht
-Ich werde eine neue Geschenk-Sektion unter dem FAQ-Bereich hinzufügen und eine neue "Gutscheine"-Unterseite erstellen.
+Die bestehenden Platzhalter-Karten werden durch die 3 echten Gutschein-Optionen ersetzt, jeweils mit Beschreibungstext und CTA-Button.
 
 ---
 
-### 1. FAQSection.tsx erweitern
+### Änderungen in `src/pages/Gutscheine.tsx`
 
-**Neue Sektion nach den Kontakt-Buttons hinzufügen:**
+**Bereich:** Zeilen 59-95 (Grid mit Platzhalter-Karten)
+
+**Neue Struktur pro Gutschein-Karte:**
 
 ```text
 +------------------------------------------+
-|           Mache jemandem eine Freude.    |  <- Kleiner Header
+|              [Preis: 40€]                |  <- Große Preisanzeige
 |                                          |
-|        Jetzt Reformer Kurs schenken:     |  <- Beschreibungstext
+|         Beschreibungstext                |  <- Erklärender Text
 |                                          |
-|         [Gutscheine entdecken]           |  <- CTA Button -> /gutscheine
+|         [Jetzt kaufen]                   |  <- CTA Button -> Bsport Link
 +------------------------------------------+
 ```
 
-**Styling:**
-- Kleiner Header im gleichen Stil wie bestehende Subheadings (uppercase, tracking, text-primary)
-- Beschreibung in text-muted-foreground
-- CTA-Button mit variant="cta" oder variant="secondary"
-- Trennlinie oberhalb zur visuellen Abgrenzung
+---
+
+### Die 3 Gutschein-Karten
+
+**1. 40€ Gutschein**
+- Preis: 40€
+- Text: Ein Geschenk-Gutschein in Höhe von 40€ mit dem zum Beispiel der Zugang zu einem Einzelkurs mit einem Paar unserer Grip-Socken erworben werden kann
+- CTA: "Jetzt kaufen" → `https://backoffice.bsport.io/checkout/5314/giftcard/18374/?force=true`
+
+**2. 100€ Gutschein** (als "Beliebt" hervorgehoben)
+- Preis: 100€
+- Text: Ein Geschenk-Gutschein in Höhe von 100€ mit dem zum Beispiel der Zugang zu 3 Kursen mit einem Paar unserer Grip-Socken erworben werden kann.
+- CTA: "Jetzt kaufen" → `https://backoffice.bsport.io/checkout/5314/giftcard/18376/?force=true`
+
+**3. Individuelle Höhe**
+- Titel: Individuelle Höhe
+- Text: Ein Geschenk-Gutschein in beliebiger Höhe genau nach deinen Wünschen! Gebe dem Empfänger volle Freiheit über die Buchung
+- CTA: "Jetzt kaufen" → `https://backoffice.bsport.io/checkout/5314/giftcard/18377/?force=true`
 
 ---
 
-### 2. Neue Seite: Gutscheine.tsx erstellen
+### Styling
 
-**Route:** `/gutscheine`
-
-**Seitenstruktur (analog zu Preise.tsx):**
-- Header mit "Zurück zur Startseite" Button
-- Titel: "Gutscheine"
-- Hero-Bereich mit Beschreibung zum Verschenken von Reformer-Kursen
-- Platzhalter-Inhalt für Gutschein-Optionen (kann später erweitert werden)
+- Beibehaltung des bestehenden Karten-Designs: `bg-cream rounded-2xl p-6 shadow-soft`
+- 100€-Karte erhält Hervorhebung mit `border-2 border-primary` und "Beliebt"-Badge
+- CTA-Buttons mit `variant="cta"` für konsistentes Branding
+- Beschreibungstext in `text-muted-foreground text-sm`
 
 ---
 
-### 3. Route in App.tsx registrieren
+### Zusätzliche Anpassung
 
-Neue Route hinzufügen:
-```tsx
-import Gutscheine from "./pages/Gutscheine";
-// ...
-<Route path="/gutscheine" element={<Gutscheine />} />
-```
+**Entfernen der "Gutschein anfragen" Sektion** (Zeilen 99-115)
+Da die Gutscheine jetzt direkt über Bsport gekauft werden können, wird die Kontakt-Sektion entfernt oder durch eine einfachere Frage-Sektion ersetzt.
 
 ---
 
 ### Technische Details
 
 **Datei-Änderungen:**
-1. `src/components/FAQSection.tsx` - Neue Geschenk-Sektion hinzufügen
-2. `src/pages/Gutscheine.tsx` - Neue Seite erstellen
-3. `src/App.tsx` - Route registrieren
+- `src/pages/Gutscheine.tsx` - Karten mit echten Daten und CTA-Links aktualisieren
 
-**Abhängigkeiten:**
-- react-router-dom (Link) für Navigation
-- Bestehende UI-Komponenten (Button)
-- Bestehendes Design-System (Farben, Typografie)
+**Keine neuen Abhängigkeiten erforderlich.**
