@@ -9,7 +9,7 @@ const GiftSection = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className={`bg-beige py-16 md:py-20 transition-all duration-700 ${
+      className={`bg-cream py-16 md:py-20 transition-all duration-700 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
