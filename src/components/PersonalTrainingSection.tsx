@@ -6,7 +6,7 @@ const PersonalTrainingSection = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-16 bg-gradient-to-b from-cream to-sand"
+      className="py-16 bg-beige/50"
     >
       <div 
         className={`text-center px-4 max-w-2xl mx-auto transition-all duration-700 ${
