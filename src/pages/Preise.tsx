@@ -2,8 +2,12 @@ import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import PricingPassCards from "@/components/PricingPassCards";
 import PricingMembershipCards from "@/components/PricingMembershipCards";
+import SectionDivider from "@/components/SectionDivider";
+import ArrowDivider from "@/components/ArrowDivider";
+import PersonalTrainingSection from "@/components/PersonalTrainingSection";
 
 const Preise = () => {
   useEffect(() => {
@@ -29,38 +33,46 @@ const Preise = () => {
 
       {/* Content */}
       <main className="w-full py-8">
-        {/* Willkommensangebot Section */}
-        <section className="mb-12">
-          <div className="text-center mb-8 px-4 max-w-2xl mx-auto">
-            <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
-              Exklusiv für Neukunden
-            </span>
-            <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
-              Discovery Package
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Starte mit 3 Reformer-Sessions inkl. Signature Grip Socks.{" "}
-              <span className="font-semibold text-earth-dark">69€</span>{" "}
-              <span className="line-through text-muted-foreground/60">96,99€</span>
-              <br />
-              Nur <span className="font-semibold">20€ pro Session</span>.
-              <br />
-              <span className="text-sm">Einmalig für Neukunden.</span>
-            </p>
-            <a 
-              href="https://backoffice.bsport.io/login?membership=5314" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button variant="cta" size="lg">
-                Jetzt Konto erstellen
-              </Button>
-            </a>
+        {/* Discovery Package Section - Abgesetzt */}
+        <section className="mb-8 px-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="relative bg-terracotta/10 border border-terracotta/30 rounded-2xl p-8 text-center">
+              <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-terracotta text-white border-0">
+                AKTION
+              </Badge>
+              <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4 mt-2">
+                Exklusiv für Neukunden
+              </span>
+              <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
+                Discovery Package
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Starte mit 3 Reformer-Sessions inkl. Signature Grip Socks.{" "}
+                <span className="font-semibold text-earth-dark">69€</span>{" "}
+                <span className="line-through text-muted-foreground/60">96,99€</span>
+                <br />
+                Nur <span className="font-semibold">20€ pro Session</span>.
+                <br />
+                <span className="text-sm">Einmalig für Neukunden.</span>
+              </p>
+              <a 
+                href="https://backoffice.bsport.io/login?membership=5314" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button variant="cta" size="lg">
+                  Jetzt Konto erstellen
+                </Button>
+              </a>
+            </div>
           </div>
         </section>
 
+        {/* Divider: Öfter hier? */}
+        <SectionDivider text="Öfter hier?" />
+
         {/* Kurspässe Section */}
-        <section className="bg-beige/50 py-12 mb-12">
+        <section className="bg-beige/50 py-12">
           <div className="text-center mb-8 px-4 max-w-2xl mx-auto">
             <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
               Flexibel trainieren
@@ -74,6 +86,9 @@ const Preise = () => {
           </div>
           <PricingPassCards />
         </section>
+
+        {/* Divider: Du willst noch mehr Vorteile? */}
+        <SectionDivider text="Du willst noch mehr Vorteile?" />
 
         {/* Memberships Section */}
         <section className="py-12">
@@ -96,6 +111,12 @@ const Preise = () => {
           </div>
           <PricingMembershipCards />
         </section>
+
+        {/* Arrow Divider */}
+        <ArrowDivider />
+
+        {/* Personal Training Section */}
+        <PersonalTrainingSection />
 
         {/* CTA Section */}
         <section className="py-16 bg-beige/30">
