@@ -50,7 +50,7 @@ const Preise = () => {
                 <span className="font-semibold text-earth-dark">69€</span>{" "}
                 <span className="line-through text-muted-foreground/60">96,99€</span>
                 <br />
-                Nur <span className="font-semibold">20€ pro Session</span>.
+                Nur <span className="line-through text-muted-foreground/60">21€</span> <span className="font-semibold">20€ pro Session</span>.
                 <br />
                 <span className="text-sm">Einmalig für Neukunden.</span>
               </p>
