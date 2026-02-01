@@ -13,6 +13,9 @@ const PersonalTrainingSection = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       >
+        <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
+          Noch individueller?
+        </span>
         <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
           Dein Körper hat die ungeteilte Aufmerksamkeit verdient?
         </h2>
