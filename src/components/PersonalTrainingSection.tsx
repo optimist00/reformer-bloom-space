@@ -14,7 +14,7 @@ const PersonalTrainingSection = () => {
         }`}
       >
         <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
-          Dein Körper hat die ungeteilte Aufmerksamkeit verdient
+          Dein Körper hat die ungeteilte Aufmerksamkeit verdient?
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-6">
           Personaltrainings und exklusive Einzelsessions
