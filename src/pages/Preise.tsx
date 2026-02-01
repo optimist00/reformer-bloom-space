@@ -120,9 +120,6 @@ const Preise = () => {
           </p>
         </section>
 
-        {/* Divider: Noch individueller? */}
-        <SectionDivider text="Noch individueller?" />
-
         {/* Personal Training Section */}
         <PersonalTrainingSection />
 
