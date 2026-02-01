@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import PricingPassCards from "@/components/PricingPassCards";
 import PricingMembershipCards from "@/components/PricingMembershipCards";
 import SectionDivider from "@/components/SectionDivider";
-import ArrowDivider from "@/components/ArrowDivider";
 import PersonalTrainingSection from "@/components/PersonalTrainingSection";
 
 const Preise = () => {
@@ -112,8 +111,8 @@ const Preise = () => {
           <PricingMembershipCards />
         </section>
 
-        {/* Arrow Divider */}
-        <ArrowDivider />
+        {/* Divider: Private Sessions */}
+        <SectionDivider text="Noch individueller?" />
 
         {/* Personal Training Section */}
         <PersonalTrainingSection />
