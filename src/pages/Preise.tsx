@@ -98,19 +98,27 @@ const Preise = () => {
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
               Memberships
             </h2>
-            <div className="flex flex-wrap justify-center gap-3 mb-4">
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-sage/10 border border-sage/30 text-sm text-earth-dark">
-                Priority Booking
-              </span>
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-sage/10 border border-sage/30 text-sm text-earth-dark">
-                Community Events
-              </span>
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-sage/10 border border-sage/30 text-sm text-earth-dark">
-                6h Storno
-              </span>
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-sage/10 border border-sage/30 text-sm text-earth-dark">
-                Wartelisten-Priorität
-              </span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 max-w-4xl mx-auto">
+              <div className="bg-cream border border-sage/20 rounded-xl p-4 text-center">
+                <span className="text-2xl mb-2 block">🗓️</span>
+                <h4 className="font-semibold text-earth-dark text-sm mb-1">Priority Booking</h4>
+                <p className="text-xs text-muted-foreground">Buche 1 Woche vor allen anderen</p>
+              </div>
+              <div className="bg-cream border border-sage/20 rounded-xl p-4 text-center">
+                <span className="text-2xl mb-2 block">🎊</span>
+                <h4 className="font-semibold text-earth-dark text-sm mb-1">Community Events</h4>
+                <p className="text-xs text-muted-foreground">Einladung zu exklusiven Events</p>
+              </div>
+              <div className="bg-cream border border-sage/20 rounded-xl p-4 text-center">
+                <span className="text-2xl mb-2 block">⏱️</span>
+                <h4 className="font-semibold text-earth-dark text-sm mb-1">Flexible Stornierung</h4>
+                <p className="text-xs text-muted-foreground">Bis 6h vor Kursbeginn</p>
+              </div>
+              <div className="bg-cream border border-sage/20 rounded-xl p-4 text-center">
+                <span className="text-2xl mb-2 block">⭐</span>
+                <h4 className="font-semibold text-earth-dark text-sm mb-1">Wartelisten-Priorität</h4>
+                <p className="text-xs text-muted-foreground">Automatisch vorne bei Wartelisten</p>
+              </div>
             </div>
             <p className="text-xs text-muted-foreground/70">
               Keine versteckten Kosten · Jederzeit kündbar.
