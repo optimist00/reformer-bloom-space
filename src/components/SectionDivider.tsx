@@ -27,7 +27,7 @@ const SectionDivider = ({ text }: SectionDividerProps) => {
   return (
     <div 
       ref={ref as React.RefObject<HTMLDivElement>}
-      className={`py-8 flex items-center justify-center gap-4 transition-all duration-700 ${
+      className={`py-6 flex items-center justify-center gap-4 transition-all duration-700 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >

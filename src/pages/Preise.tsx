@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import PricingPassCards from "@/components/PricingPassCards";
 import PricingMembershipCards from "@/components/PricingMembershipCards";
 import SectionDivider from "@/components/SectionDivider";
-import InlineSectionLabel from "@/components/InlineSectionLabel";
 import PersonalTrainingSection from "@/components/PersonalTrainingSection";
 
 const Preise = () => {
@@ -34,7 +33,7 @@ const Preise = () => {
       {/* Content */}
       <main className="w-full py-8">
         {/* Discovery Package Section - Abgesetzt */}
-        <section className="mb-8 px-4">
+        <section className="px-4">
           <div className="max-w-2xl mx-auto">
             <div className="relative bg-terracotta/10 border border-terracotta/30 rounded-2xl p-8 text-center">
               <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-terracotta text-white border-0">
@@ -68,11 +67,12 @@ const Preise = () => {
           </div>
         </section>
 
+        {/* Divider: Öfter hier? */}
+        <SectionDivider text="Öfter hier?" />
 
         {/* Kurspässe Section */}
         <section className="bg-beige/50 py-12">
           <div className="text-center mb-8 px-4 max-w-2xl mx-auto">
-            <InlineSectionLabel text="Öfter hier?" />
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
               Kurspässe
             </h2>
@@ -120,6 +120,8 @@ const Preise = () => {
           </p>
         </section>
 
+        {/* Divider: Noch individueller? */}
+        <SectionDivider text="Noch individueller?" />
 
         {/* Personal Training Section */}
         <PersonalTrainingSection />
