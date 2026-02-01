@@ -1,47 +1,54 @@
 
-## Membership-Anzeige von monatlich auf 4-wöchentlich umstellen
+
+## Zweizeilige Membership-Beschreibungen mit Untertitel
 
 ### Übersicht
-Alle Membership-bezogenen Texte werden von "monatlich" auf "4-wöchentlich" umgestellt, mit Fokus auf den Wochen-Rhythmus (1x pro Woche, 2x pro Woche, So oft du willst).
+Jede Membership erhält eine zweizeilige Beschreibung: Haupttext + kursiver Untertitel darunter.
 
 ---
 
-### Änderungen
+### Neue Struktur
 
-#### 1. PricingMembershipCards.tsx
-
-| Vorher | Nachher |
-|--------|---------|
-| "4 Kurse pro Monat" | "1x pro Woche" |
-| "8 Kurse pro Monat" | "2x pro Woche" |
-| "Unbegrenzte Kurse" | "So oft du willst" |
-| "/Monat" | "/4 Wochen" |
+| Membership | Haupttext | Untertitel (kursiv) |
+|------------|-----------|---------------------|
+| MEDIUM | 1 Session / Woche | Dein wöchentliches Ritual |
+| LARGE | 2 Sessions / Woche | Erreiche deine Ziele doppelt so schnell |
+| UNLIMITED | So oft du möchtest | Grenzenlose Freiheit |
 
 ---
 
-#### 2. PricingSection.tsx (Homepage)
+### Technische Änderungen
 
-| Vorher | Nachher |
-|--------|---------|
-| suffix: "/Monat" | suffix: "/4 Wochen" |
-| "Monatlich kündbar" | "Jederzeit kündbar" |
+**Datei:** `src/components/PricingMembershipCards.tsx`
 
----
+1. **Interface erweitern** (Zeile 3): Neues Feld `tagline` hinzufügen
 
-#### 3. Preise.tsx (Preise-Seite)
+2. **Daten aktualisieren** (Zeilen 8-26):
+   - `sessionsInfo` auf die neuen Haupttexte ändern
+   - `tagline` mit den kursiven Untertiteln ergänzen
 
-| Vorher | Nachher |
-|--------|---------|
-| Subheading: "Monatlich" | "4-Wöchentlich" |
-| "Jederzeit monatlich kündbar" | "Jederzeit kündbar" |
+3. **Rendering anpassen** (Zeilen 40-42):
+   - Bestehende `<p>` für `sessionsInfo` beibehalten
+   - Neue `<p>` mit `italic` Klasse für `tagline` darunter
 
 ---
 
-### Technische Details
+### Vorher/Nachher
 
-**Betroffene Dateien:**
-- `src/components/PricingMembershipCards.tsx` (Zeilen 11, 17, 23, 48)
-- `src/components/PricingSection.tsx` (Zeilen 36, 40)
-- `src/pages/Preise.tsx` (Zeilen 82, 94)
+```text
+Vorher:
+┌─────────────────────────┐
+│ Membership MEDIUM       │
+│ 1x pro Woche            │
+│ 109,00 € /4 Wochen      │
+└─────────────────────────┘
 
-**Keine neuen Abhängigkeiten erforderlich.**
+Nachher:
+┌─────────────────────────┐
+│ Membership MEDIUM       │
+│ 1 Session / Woche       │
+│ Dein wöchentliches Ritual  <- kursiv
+│ 109,00 € /4 Wochen      │
+└─────────────────────────┘
+```
+
