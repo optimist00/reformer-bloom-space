@@ -33,11 +33,11 @@ const pricingPlans = [
     name: "UNLIMITED Membership",
     description: "The Ultimate Lifestyle – Unbegrenzte Kurse",
     price: "289",
-    suffix: "/Monat",
+    suffix: "/4 Wochen",
     features: [
       "Unbegrenzte Kurse",
       "Priorität bei Buchung",
-      "Monatlich kündbar",
+      "Jederzeit kündbar",
     ],
     highlighted: false,
     buttonText: "Mitglied werden",
