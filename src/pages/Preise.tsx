@@ -67,14 +67,12 @@ const Preise = () => {
           </div>
         </section>
 
-        {/* Divider: Öfter hier? */}
-        <SectionDivider text="Öfter hier?" />
 
         {/* Kurspässe Section */}
         <section className="bg-beige/50 py-12">
           <div className="text-center mb-8 px-4 max-w-2xl mx-auto">
             <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
-              Flexibel trainieren
+              Öfter hier?
             </span>
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
               Kurspässe
@@ -123,8 +121,6 @@ const Preise = () => {
           <PricingMembershipCards />
         </section>
 
-        {/* Divider: Private Sessions */}
-        <SectionDivider text="Noch individueller?" />
 
         {/* Personal Training Section */}
         <PersonalTrainingSection />
