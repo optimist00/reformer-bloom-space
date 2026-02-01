@@ -27,7 +27,7 @@ const InlineSectionLabel = ({ text }: InlineSectionLabelProps) => {
   return (
     <div 
       ref={ref as React.RefObject<HTMLDivElement>}
-      className={`flex items-center justify-center gap-3 mb-4 transition-all duration-700 ${
+      className={`flex items-center justify-center gap-3 mb-6 transition-all duration-700 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
