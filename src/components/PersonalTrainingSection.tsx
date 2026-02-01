@@ -1,5 +1,4 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import InlineSectionLabel from "@/components/InlineSectionLabel";
 
 const PersonalTrainingSection = () => {
   const { ref, isVisible } = useScrollAnimation(0.2);
@@ -7,14 +6,13 @@ const PersonalTrainingSection = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-16 bg-beige/50"
+      className="py-12 bg-beige/50"
     >
       <div 
         className={`text-center px-4 max-w-2xl mx-auto transition-all duration-700 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       >
-        <InlineSectionLabel text="Noch individueller?" />
         <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
           Dein Körper hat die ungeteilte Aufmerksamkeit verdient?
         </h2>
