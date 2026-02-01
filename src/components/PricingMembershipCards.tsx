@@ -1,6 +1,7 @@
 interface MembershipCard {
   name: string;
   sessionsInfo: string;
+  tagline: string;
   price: string;
   pricePerSession?: string;
 }
@@ -8,19 +9,22 @@ interface MembershipCard {
 const memberships: MembershipCard[] = [
   {
     name: "Membership MEDIUM",
-    sessionsInfo: "1x pro Woche",
+    sessionsInfo: "1 Session / Woche",
+    tagline: "Dein wöchentliches Ritual",
     price: "109,00 €",
     pricePerSession: "27,25€ pro Session",
   },
   {
     name: "Membership LARGE",
-    sessionsInfo: "2x pro Woche",
+    sessionsInfo: "2 Sessions / Woche",
+    tagline: "Erreiche deine Ziele doppelt so schnell",
     price: "199,00 €",
     pricePerSession: "24,80€ pro Session",
   },
   {
     name: "Membership UNLIMITED",
-    sessionsInfo: "So oft du willst",
+    sessionsInfo: "So oft du möchtest",
+    tagline: "Grenzenlose Freiheit",
     price: "289,00 €",
   },
 ];
@@ -37,8 +41,11 @@ const PricingMembershipCards = () => {
             <h3 className="font-heading text-base font-semibold text-earth-dark mb-0.5">
               {membership.name}
             </h3>
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-sm text-muted-foreground mb-1">
               {membership.sessionsInfo}
+            </p>
+            <p className="text-sm text-muted-foreground italic mb-4">
+              {membership.tagline}
             </p>
 
             <div className="mb-1">
