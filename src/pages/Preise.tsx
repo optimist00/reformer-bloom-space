@@ -114,11 +114,11 @@ const Preise = () => {
                 <p className="text-xs text-muted-foreground">Automatisch vorne bei Wartelisten</p>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground/70">
-              Keine versteckten Kosten · Jederzeit kündbar.
-            </p>
           </div>
           <PricingMembershipCards />
+          <p className="text-xs text-muted-foreground/70 text-center mt-6">
+            Keine versteckten Kosten · Jederzeit kündbar.
+          </p>
         </section>
 
 
