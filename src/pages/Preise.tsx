@@ -100,22 +100,18 @@ const Preise = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 max-w-4xl mx-auto">
               <div className="bg-cream border border-sage/20 rounded-xl p-4 text-center">
-                <span className="text-2xl mb-2 block">🗓️</span>
                 <h4 className="font-semibold text-earth-dark text-sm mb-1">Priority Booking</h4>
                 <p className="text-xs text-muted-foreground">Buche 1 Woche vor allen anderen</p>
               </div>
               <div className="bg-cream border border-sage/20 rounded-xl p-4 text-center">
-                <span className="text-2xl mb-2 block">🎊</span>
                 <h4 className="font-semibold text-earth-dark text-sm mb-1">Community Events</h4>
                 <p className="text-xs text-muted-foreground">Einladung zu exklusiven Events</p>
               </div>
               <div className="bg-cream border border-sage/20 rounded-xl p-4 text-center">
-                <span className="text-2xl mb-2 block">⏱️</span>
                 <h4 className="font-semibold text-earth-dark text-sm mb-1">Flexible Stornierung</h4>
                 <p className="text-xs text-muted-foreground">Bis 6h vor Kursbeginn</p>
               </div>
               <div className="bg-cream border border-sage/20 rounded-xl p-4 text-center">
-                <span className="text-2xl mb-2 block">⭐</span>
                 <h4 className="font-semibold text-earth-dark text-sm mb-1">Wartelisten-Priorität</h4>
                 <p className="text-xs text-muted-foreground">Automatisch vorne bei Wartelisten</p>
               </div>
