@@ -106,7 +106,7 @@ const Preise = () => {
               </div>
               <div className="bg-cream border border-sage/20 rounded-xl p-4 text-center">
                 <h4 className="font-semibold text-earth-dark text-sm mb-1">Flexible Stornierung</h4>
-                <p className="text-xs text-muted-foreground">Bis 6h vor Kursbeginn</p>
+                <p className="text-xs text-muted-foreground">Bis <span className="line-through">12h</span> 6h vor Kursbeginn</p>
               </div>
               <div className="bg-cream border border-sage/20 rounded-xl p-4 text-center">
                 <h4 className="font-semibold text-earth-dark text-sm mb-1">Wartelisten-Priorität</h4>
