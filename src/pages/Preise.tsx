@@ -79,7 +79,7 @@ const Preise = () => {
         <section className="py-12">
           <div className="text-center mb-8 px-4 max-w-2xl mx-auto">
             <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-sage mb-4">
-              Monatlich
+              4-Wöchentlich
             </span>
             <h2 className="text-2xl md:text-3xl font-heading font-semibold text-earth-dark mb-4">
               Memberships
@@ -91,7 +91,7 @@ const Preise = () => {
               <li>• <span className="font-semibold text-earth-dark">Wartelisten-Priorität:</span> Bei ausgebuchten Kursen automatisch vorne</li>
             </ul>
             <p className="text-xs text-muted-foreground/70">
-              Keine versteckten Kosten · Jederzeit monatlich kündbar.
+              Keine versteckten Kosten · Jederzeit kündbar.
             </p>
           </div>
           <PricingMembershipCards />

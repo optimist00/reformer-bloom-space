@@ -8,19 +8,19 @@ interface MembershipCard {
 const memberships: MembershipCard[] = [
   {
     name: "Membership MEDIUM",
-    sessionsInfo: "4 Kurse pro Monat",
+    sessionsInfo: "1x pro Woche",
     price: "109,00 €",
     pricePerSession: "27,25€ pro Session",
   },
   {
     name: "Membership LARGE",
-    sessionsInfo: "8 Kurse pro Monat",
+    sessionsInfo: "2x pro Woche",
     price: "199,00 €",
     pricePerSession: "24,80€ pro Session",
   },
   {
     name: "Membership UNLIMITED",
-    sessionsInfo: "Unbegrenzte Kurse",
+    sessionsInfo: "So oft du willst",
     price: "289,00 €",
   },
 ];
@@ -45,7 +45,7 @@ const PricingMembershipCards = () => {
               <span className="text-2xl font-heading font-semibold text-earth-dark">
                 {membership.price}
               </span>
-              <span className="text-sm text-muted-foreground ml-1">/Monat</span>
+              <span className="text-sm text-muted-foreground ml-1">/4 Wochen</span>
             </div>
             
             {membership.pricePerSession && (
