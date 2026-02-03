@@ -1,21 +1,51 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useEffect, useState } from "react";
 import heroImage from "@/assets/hero-fullscreen.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 
 const Hero = () => {
+  const isMobile = useIsMobile();
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
+
   const scrollToBooking = () => {
     document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const showVideo = !isMobile && !prefersReducedMotion;
+
   return (
     <section className="relative min-h-screen pt-20">
-      {/* Fullscreen background image */}
-      <img 
-        src={heroImage} 
-        alt="Pilates Training auf dem Reformer im House of Pilates Dresden" 
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ objectPosition: 'center 60%' }}
-      />
+      {/* Fullscreen background - video on desktop, image on mobile/reduced motion */}
+      {showVideo ? (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={heroImage}
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: 'center 60%' }}
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+      ) : (
+        <img 
+          src={heroImage} 
+          alt="Pilates Training auf dem Reformer im House of Pilates Dresden" 
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: 'center 60%' }}
+        />
+      )}
       
       {/* Warm brown tint overlay */}
       <div className="absolute inset-0 bg-earth/25" />
