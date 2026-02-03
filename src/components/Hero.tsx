@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-studio.jpg";
+import heroImage from "@/assets/hero-reformer.jpg";
 
 const Hero = () => {
   const scrollToBooking = () => {
@@ -14,9 +14,9 @@ const Hero = () => {
         {/* Full-screen background image */}
         <img 
           src={heroImage} 
-          alt="House of Pilates Dresden Studio" 
+          alt="Pilates Training auf dem Reformer im House of Pilates Dresden" 
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: '62.5% center' }}
+          style={{ objectPosition: 'center 40%' }}
         />
         {/* Brown tint overlay */}
         <div className="absolute inset-0 bg-earth/30" />
@@ -112,9 +112,9 @@ const Hero = () => {
         <div className="w-1/3 relative">
           <img 
             src={heroImage} 
-            alt="House of Pilates Dresden Studio" 
+            alt="Pilates Training auf dem Reformer im House of Pilates Dresden" 
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: '62.5% center' }}
+            style={{ objectPosition: 'center 30%' }}
           />
           {/* Brown tint overlay */}
           <div className="absolute inset-0 bg-earth/35" />
