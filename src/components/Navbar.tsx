@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/ueber-uns", label: "Über uns", isPage: true },
-    { href: "#studio", label: "Das Studio" },
+    { href: "/studio", label: "Das Studio", isPage: true },
     { href: "#pricing", label: "Preise" },
     { href: "#booking", label: "Kurse" },
     { href: "#faq", label: "FAQ" },
