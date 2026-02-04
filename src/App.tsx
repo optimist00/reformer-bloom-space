@@ -11,6 +11,7 @@ import Stundenplan from "./pages/Stundenplan";
 import Preise from "./pages/Preise";
 import Gutscheine from "./pages/Gutscheine";
 import UeberUns from "./pages/UeberUns";
+import Studio from "./pages/Studio";
 import AppPage from "./pages/App";
 import NotFound from "./pages/NotFound";
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/preise" element={<Preise />} />
           <Route path="/gutscheine" element={<Gutscheine />} />
           <Route path="/ueber-uns" element={<UeberUns />} />
+          <Route path="/studio" element={<Studio />} />
           <Route path="/app" element={<AppPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
