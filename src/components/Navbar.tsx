@@ -64,7 +64,7 @@ const Navbar = () => {
           <Button
             variant="cta"
             size="sm"
-            className="hidden sm:inline-flex"
+            className="hidden sm:inline-flex bg-sand hover:bg-sand/90 text-earth-dark"
             onClick={() => {
               if (location.pathname !== "/") {
                 navigate("/#booking");
