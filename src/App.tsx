@@ -10,6 +10,7 @@ import AGB from "./pages/AGB";
 import Stundenplan from "./pages/Stundenplan";
 import Preise from "./pages/Preise";
 import Gutscheine from "./pages/Gutscheine";
+import UeberUns from "./pages/UeberUns";
 import AppPage from "./pages/App";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/stundenplan" element={<Stundenplan />} />
           <Route path="/preise" element={<Preise />} />
           <Route path="/gutscheine" element={<Gutscheine />} />
+          <Route path="/ueber-uns" element={<UeberUns />} />
           <Route path="/app" element={<AppPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
