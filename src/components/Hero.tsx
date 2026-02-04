@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useEffect, useState } from "react";
 import heroImage from "@/assets/hero-fullscreen.jpg";
-import heroVideo from "@/assets/hero-video.mp4";
+import heroVideoWebm from "@/assets/hero-video.webm";
+import heroVideoMp4 from "@/assets/hero-video.mp4";
 
 const Hero = () => {
   const isMobile = useIsMobile();
@@ -36,7 +37,8 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition: 'center 60%' }}
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src={heroVideoWebm} type="video/webm" />
+          <source src={heroVideoMp4} type="video/mp4" />
         </video>
       ) : (
         <img 
