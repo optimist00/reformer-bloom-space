@@ -10,16 +10,16 @@ const testimonials = [
   },
   {
     name: "Emily E.",
-    text: "Ich bin wirklich an meine Grenzen gekommen – und das im besten Sinne! Jessie geht auf jede Teilnehmerin individuell ein und passt die Übungen perfekt an. Eine super Betreuung!",
+    text: "Ich bin wirklich an meine Grenzen gekommen! Jessie geht auf jede Teilnehmerin individuell ein und passt die Übungen perfekt an. Eine super Betreuung!",
     highlight: "Persönlich & fordernd",
   },
   {
-    name: "Sophie M.",
+    name: "Jutta M.",
     text: "Nach Jahren mit Rückenschmerzen habe ich endlich eine Trainingsmethode gefunden, die wirklich hilft. Die kleine Gruppengröße macht den Unterschied.",
     highlight: "Endlich schmerzfrei",
   },
   {
-    name: "Laura K.",
+    name: "Lena J.",
     text: "Die persönliche Betreuung ist einzigartig. Jessie achtet auf jede Bewegung und korrigiert sanft – so habe ich meine Haltung komplett verändert.",
     highlight: "Individuelle Betreuung",
   },
