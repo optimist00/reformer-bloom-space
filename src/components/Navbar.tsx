@@ -55,7 +55,8 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <button
           onClick={handleLogoClick}
-          className="font-heading text-xl font-medium tracking-widest text-foreground"
+          className="text-xl font-light tracking-[0.25em] text-foreground"
+          style={{ fontFamily: "'Outfit', sans-serif" }}
         >
           HOUSE OF PILATES
         </button>
