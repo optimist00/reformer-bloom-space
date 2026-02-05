@@ -1,34 +1,52 @@
 
 
-# Plan: Moderne Fonts für die Hero-Überschrift testen
+# Plan: Emotionaler Hero mit neuen Textelementen
 
-## Zusammenfassung
+## Neue Messaging-Struktur
 
-Es werden mehrere moderne, elegante Schriftarten für die Hero-Headline getestet, die zur Boutique-Ästhetik des Studios passen.
+```text
+┌─────────────────────────────────────────────────────────┐
+│                                                         │
+│   Spüre den Unterschied.                               │ ← Emotionaler Hook (groß, Outfit font-light)
+│                                                         │
+│   ───────────                                           │
+│                                                         │
+│   HOUSE OF PILATES DRESDEN                             │ ← Studio-Name (uppercase, elegant)
+│                                                         │
+│   Dein Moment für Kraft, Balance und Wohlbefinden.     │ ← Emotionale Subheadline
+│                                                         │
+│   [ Probestunde buchen → ]                              │ ← Softer CTA
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
 
-## Font-Optionen
+## Gewählte Texte
 
-| Font | Stil | Charakter |
-|------|------|-----------|
-| **Outfit** | Sans-serif, geometrisch | Clean, modern, passend zum Navbar-Logo |
-| **Josefin Sans** | Sans-serif, elegant | Leicht, feminin, Boutique-Feel |
-| **Poppins** | Sans-serif, rund | Modern, freundlich, gut lesbar |
-| **DM Sans** | Sans-serif, neutral | Zeitgemäß, professionell |
-| **Sora** | Sans-serif, geometrisch | Tech-modern, präzise |
+| Element | Text |
+|---------|------|
+| Emotionaler Hook | "Spüre den Unterschied." |
+| Studio-Name | "HOUSE OF PILATES DRESDEN" |
+| Subheadline | "Dein Moment für Kraft, Balance und Wohlbefinden." |
+| CTA | "Probestunde buchen" |
 
-## Empfehlung
+## Technische Umsetzung
 
-**Outfit** - bereits für das Logo verwendet, würde visuelle Konsistenz schaffen und den modernen, cleanen Look verstärken.
+**src/components/Hero.tsx:**
 
-## Umsetzung
+1. **Neuer emotionaler Hook** "Spüre den Unterschied."
+   - Font: Outfit mit `font-light`
+   - Größe: text-3xl bis text-5xl
+   - Tracking: Weit (`tracking-wide` oder `tracking-[0.15em]`)
 
-1. Outfit-Font auf die Hero-Headline anwenden
-2. Font-Gewicht von `extrabold` auf `semibold` oder `medium` reduzieren für eleganteren Look
-3. Letter-spacing leicht erhöhen für Luftigkeit
+2. **Studio-Name**
+   - Uppercase mit weitem Letter-Spacing
+   - Outfit font, font-light
+   - Kleiner als der Hook (text-lg bis text-2xl)
 
-## Technische Änderungen
+3. **Subheadline** 
+   - "Dein Moment für Kraft, Balance und Wohlbefinden."
+   - Montserrat (font-body), font-medium
 
-**src/components/Hero.tsx**
-- H1-Element mit Outfit-Font stylen
-- Anpassung der Gewichtung und des Trackings
+4. **CTA** 
+   - Text: "Probestunde buchen"
 
