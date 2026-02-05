@@ -26,7 +26,7 @@ const TrainerCard = ({ name, title, description, image, isPlaceholder }: Trainer
     >
       <div className="bg-cream rounded-2xl overflow-hidden shadow-soft">
         {/* Image */}
-        <div className="aspect-[3/4] relative overflow-hidden">
+        <div className="aspect-[4/5] relative overflow-hidden">
           {isPlaceholder ? (
             <div className="w-full h-full bg-gradient-to-br from-sand to-beige flex items-center justify-center">
               <div className="text-center">
