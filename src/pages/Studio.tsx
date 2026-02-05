@@ -176,16 +176,19 @@ const Studio = () => {
                   </div>
                 </div>
                 
-                {/* Google Maps Link */}
-                <a
-                  href="https://maps.google.com/?q=Heinrichstraße+2,+01097+Dresden"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
-                >
-                  In Google Maps öffnen
-                  <span aria-hidden="true">→</span>
-                </a>
+                {/* Embedded Google Map */}
+                <div className="rounded-xl overflow-hidden h-28 mt-2">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.2!2d13.7383!3d51.0667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709cf3c8b8b8b8b%3A0x0!2sHeinrichstra%C3%9Fe%202%2C%2001097%20Dresden!5e0!3m2!1sde!2sde!4v1"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Standort House of Pilates Dresden"
+                  />
+                </div>
               </div>
 
               {/* Transport Options */}
