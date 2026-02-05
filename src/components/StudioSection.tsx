@@ -1,4 +1,6 @@
 import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import studioImage from "@/assets/studio.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -61,6 +63,10 @@ const StudioSection = () => {
                 </li>
               ))}
             </ul>
+
+            <Button asChild variant="secondary" className="mt-8">
+              <Link to="/studio">Unser Studio</Link>
+            </Button>
           </div>
         </div>
       </div>
