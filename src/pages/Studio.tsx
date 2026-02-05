@@ -46,12 +46,14 @@ const Studio = () => {
               aboutVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-large">
-              <img
-                src={studioImage}
-                alt="House of Pilates Dresden Studio"
-                className="w-full h-full object-cover"
-              />
+            <div className="max-w-md mx-auto md:max-w-lg">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-soft">
+                <img
+                  src={studioImage}
+                  alt="House of Pilates Dresden Studio"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
 
