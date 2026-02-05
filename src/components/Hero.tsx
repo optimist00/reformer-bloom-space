@@ -58,17 +58,28 @@ const Hero = () => {
       {/* Content - positioned at bottom */}
       <div className="absolute bottom-0 left-0 right-0 z-10 px-6 md:px-12 lg:px-20 pb-12 md:pb-16 lg:pb-20">
         <div className="max-w-4xl animate-fade-in">
-          {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white mb-4 md:mb-6 font-body">
-            House of Pilates Dresden
-          </h1>
+          {/* Emotionaler Hook */}
+          <p 
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-white mb-4 md:mb-6 tracking-wide"
+            style={{ fontFamily: "'Outfit', sans-serif" }}
+          >
+            Spüre den Unterschied.
+          </p>
 
           {/* Decorative line */}
           <div className="w-16 md:w-20 h-0.5 bg-white/60 mb-4 md:mb-6" />
 
+          {/* Studio Name */}
+          <h1 
+            className="text-lg sm:text-xl md:text-2xl font-light text-white/90 mb-4 md:mb-6 uppercase tracking-[0.25em]"
+            style={{ fontFamily: "'Outfit', sans-serif" }}
+          >
+            House of Pilates Dresden
+          </h1>
+
           {/* Subheadline */}
-          <p className="text-base md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8 font-medium max-w-xl">
-            Intime Atmosphäre. Individuelle Betreuung. Sichtbare Ergebnisse.
+          <p className="text-base md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8 font-medium max-w-xl font-body">
+            Dein Moment für Kraft, Balance und Wohlbefinden.
           </p>
 
           {/* CTA */}
@@ -79,12 +90,9 @@ const Hero = () => {
               className="group shadow-2xl bg-sand hover:bg-sand/90 text-earth-dark"
               onClick={scrollToBooking}
             >
-              Jetzt Kurs buchen
+              Probestunde buchen
               <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
-            <p className="text-sm text-white/70 mt-4 font-medium">
-              Begrenzte Plätze verfügbar
-            </p>
           </div>
 
           {/* Stats - hidden on mobile, visible on tablet+ */}
