@@ -1,7 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import jessieImage from "@/assets/jessie.jpg";
+import jessieImage from "@/assets/jessie-reformer.webp";
+import leonoreImage from "@/assets/leonore-reformer.webp";
+import elisaImage from "@/assets/elisa-reformer.webp";
+import lauraImage from "@/assets/laura-reformer.webp";
 
 interface TrainerProps {
   name: string;
@@ -73,24 +76,24 @@ const trainers: TrainerProps[] = [
     title: "Strength, Science & Soul",
     description:
       "Mit 22 Jahren und einem Studium in Fitnessökonomie bringt Leonore geballte Expertise ins Team. Seit 3,5 Jahren motiviert sie Teilnehmerinnen mit ihrer herzlichen Art. Sie liebt den Mix aus Kraft und Kontrolle am Reformer – und sorgt vor allem dafür, dass ihr euch in jeder Class rundum wohlfühlt!",
-    image: "",
-    isPlaceholder: true,
+    image: leonoreImage,
+    isPlaceholder: false,
   },
   {
     name: "Elisa",
     title: "Mindful Movement & Balance",
     description:
       "Für Elisa ist der Reformer mehr als nur ein Trainingsgerät. In ihren Classes verbindet sie bewusste Bewegung mit Kraft, Kontrolle und Flow. Der Fokus liegt auf einem klaren, effektiven Training, das gleichzeitig Raum schafft, den Kopf frei zu bekommen und bei sich anzukommen. Achtsamkeit und körperliches Wohlbefinden gehen bei ihr Hand in Hand.",
-    image: "",
-    isPlaceholder: true,
+    image: elisaImage,
+    isPlaceholder: false,
   },
   {
     name: "Laura",
     title: "Angehende Ärztin & Gym Enthusiastin",
     description:
       "Sport ist fester Bestandteil von Lauras Alltag und das Gym ihr zweites Zuhause. Im House of Pilates übernimmt sie die Legs und Booty Kurse und bringt dort ihre Leidenschaft für kraftvolles, fokussiertes Training ein. Ihre Stunden sind intensiv, klar und auf echte Muskelarbeit ausgelegt.",
-    image: "",
-    isPlaceholder: true,
+    image: lauraImage,
+    isPlaceholder: false,
   },
 ];
 
