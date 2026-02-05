@@ -167,8 +167,7 @@ const Studio = () => {
                     <h3 className="font-heading text-xl mb-2">Adresse</h3>
                     <p className="text-muted-foreground">
                       Heinrichstraße 2<br />
-                      01097 Dresden<br />
-                      (Neustadt)
+                      01097 Dresden
                     </p>
                   </div>
                 </div>
