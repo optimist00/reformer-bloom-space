@@ -59,10 +59,7 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0 z-10 px-6 md:px-12 lg:px-20 pb-12 md:pb-16 lg:pb-20">
         <div className="max-w-4xl animate-fade-in">
           {/* Headline */}
-          <h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-tight text-white mb-4 md:mb-6 tracking-wide"
-            style={{ fontFamily: "'Outfit', sans-serif" }}
-          >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white mb-4 md:mb-6 font-body">
             House of Pilates Dresden
           </h1>
 
