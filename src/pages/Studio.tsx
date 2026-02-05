@@ -2,11 +2,17 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import studioImage from "@/assets/studio.jpg";
+import studioEquipment from "@/assets/studio-equipment.webp";
+import studioReformerDetail from "@/assets/studio-reformer-detail.webp";
+import studioTraining from "@/assets/studio-training.webp";
+import studioLogoWall from "@/assets/studio-logo-wall.jpg";
+import studioShop from "@/assets/studio-shop.webp";
 import { MapPin, Car, Train } from "lucide-react";
 
 const Studio = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
   const { ref: aboutRef, isVisible: aboutVisible } = useScrollAnimation();
+  const { ref: galleryRef, isVisible: galleryVisible } = useScrollAnimation();
   const { ref: locationRef, isVisible: locationVisible } = useScrollAnimation();
 
   return (
@@ -72,6 +78,69 @@ const Studio = () => {
                   das Kraft, Flexibilität und Balance vereint. Ob Anfänger:in oder Fortgeschrittene – 
                   bei uns findest du den passenden Kurs für dein Level.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Gallery Section */}
+          <div
+            ref={galleryRef as React.RefObject<HTMLDivElement>}
+            className={`mb-16 md:mb-20 transition-all duration-700 ${
+              galleryVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div className="text-center mb-8">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[3px] text-primary mb-3">
+                Impressionen
+              </span>
+              <h2 className="text-2xl md:text-3xl">Einblicke ins Studio</h2>
+            </div>
+
+            {/* Masonry-style Gallery Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {/* Large image - spans 2 rows on desktop */}
+              <div className="row-span-2 rounded-2xl overflow-hidden shadow-soft">
+                <img
+                  src={studioTraining}
+                  alt="Reformer Training im House of Pilates"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Logo wall */}
+              <div className="rounded-2xl overflow-hidden shadow-soft aspect-square">
+                <img
+                  src={studioLogoWall}
+                  alt="House of Pilates Dresden Logo an der Wand"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Reformer detail */}
+              <div className="rounded-2xl overflow-hidden shadow-soft aspect-square">
+                <img
+                  src={studioReformerDetail}
+                  alt="Reformer Gerät Nahaufnahme"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Equipment & lighting */}
+              <div className="rounded-2xl overflow-hidden shadow-soft aspect-square">
+                <img
+                  src={studioEquipment}
+                  alt="Pilates Equipment und Beleuchtung"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Shop */}
+              <div className="rounded-2xl overflow-hidden shadow-soft aspect-square">
+                <img
+                  src={studioShop}
+                  alt="House of Pilates Shop mit Socken und Smoothies"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
