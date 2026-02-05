@@ -36,6 +36,9 @@ const Stundenplan = () => {
           <p className="text-muted-foreground text-sm">
             Finde den passenden Termin und buche direkt online
           </p>
+          <p className="text-xs text-primary mt-2 italic">
+            Neu hier? Kleiner Tipp: Starte am besten mit dem <strong>FULL BODY BEGINNER</strong> Kurs um die Grundlagen zu verstehen.
+          </p>
           <a href="https://backoffice.bsport.io/login/customer?membership=5314">
             <Button size="sm" variant="secondary" className="mt-3">
               Jetzt anmelden
