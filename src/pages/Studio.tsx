@@ -39,47 +39,42 @@ const Studio = () => {
             </p>
           </div>
 
-          {/* Studio Image */}
+          {/* Studio Image + About Side by Side */}
           <div
             ref={aboutRef as React.RefObject<HTMLDivElement>}
-            className={`mb-12 md:mb-16 transition-all duration-700 ${
+            className={`mb-16 md:mb-20 transition-all duration-700 ${
               aboutVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="max-w-md mx-auto md:max-w-lg">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-soft">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-stretch max-w-5xl mx-auto">
+              {/* Studio Image */}
+              <div className="aspect-[4/5] md:aspect-auto rounded-2xl overflow-hidden shadow-soft">
                 <img
                   src={studioImage}
                   alt="House of Pilates Dresden Studio"
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
-          </div>
 
-          {/* About Studio */}
-          <div className="max-w-3xl mx-auto mb-16 md:mb-20">
-            <div className="bg-cream rounded-2xl p-8 md:p-12 shadow-soft">
-              <h2 className="font-heading text-2xl md:text-3xl mb-6 text-center">
-                Willkommen im House of Pilates
-              </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  Unser Studio in der Dresdner Neustadt ist ein Rückzugsort vom Alltag – ein Raum, 
-                  in dem du dich ganz auf dich und deinen Körper konzentrieren kannst. Die warme, 
-                  einladende Atmosphäre und das durchdachte Design schaffen die perfekte Umgebung 
-                  für dein Training.
-                </p>
-                <p>
-                  Mit maximal sechs Teilnehmer:innen pro Kurs garantieren wir eine persönliche 
-                  Betreuung, die du in größeren Studios vergeblich suchst. Jede Bewegung wird 
-                  begleitet, jede Korrektur individuell angepasst.
-                </p>
-                <p>
-                  Unsere hochwertigen Reformer-Geräte bieten dir ein effektives Ganzkörpertraining, 
-                  das Kraft, Flexibilität und Balance vereint. Ob Anfänger:in oder Fortgeschrittene – 
-                  bei uns findest du den passenden Kurs für dein Level.
-                </p>
+              {/* About Studio */}
+              <div className="bg-cream rounded-2xl p-6 md:p-8 shadow-soft flex flex-col justify-center">
+                <h2 className="font-heading text-2xl md:text-3xl mb-5">
+                  Willkommen im House of Pilates
+                </h2>
+                <div className="space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base">
+                  <p>
+                    Unser Studio in der Dresdner Neustadt ist ein Rückzugsort vom Alltag – ein Raum, 
+                    in dem du dich ganz auf dich und deinen Körper konzentrieren kannst.
+                  </p>
+                  <p>
+                    Mit maximal sechs Teilnehmer:innen pro Kurs garantieren wir eine persönliche 
+                    Betreuung, die du in größeren Studios vergeblich suchst.
+                  </p>
+                  <p>
+                    Unsere hochwertigen Reformer-Geräte bieten dir ein effektives Ganzkörpertraining, 
+                    das Kraft, Flexibilität und Balance vereint.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
