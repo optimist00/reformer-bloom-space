@@ -43,11 +43,11 @@ const Footer = () => {
                 info@houseofpilatesdresden.de
               </a>
               <a
-                href="tel:+4915229256804"
+                href="tel:+4915511782240"
                 className="flex items-center gap-2 text-sm opacity-90 hover:opacity-100 hover:text-primary transition-all"
               >
                 <Phone className="w-4 h-4" />
-                0152 29256804
+                0155 11782240
               </a>
               <a
                 href="https://maps.google.com/?q=Heinrichstr.+2,+01097+Dresden"
