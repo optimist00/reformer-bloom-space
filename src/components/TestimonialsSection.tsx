@@ -4,6 +4,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
+    name: "Anna T.",
+    text: "Reformer Pilates ist mein wöchentliches Highlight. Das Studio hat eine wunderbare Atmosphäre und ich fühle mich nach jeder Stunde gestärkt.",
+    highlight: "Mein Wochenritual",
+  },
+  {
+    name: "Emily E.",
+    text: "Ich bin wirklich an meine Grenzen gekommen – und das im besten Sinne! Jessie geht auf jede Teilnehmerin individuell ein und passt die Übungen perfekt an. Eine super Betreuung!",
+    highlight: "Persönlich & fordernd",
+  },
+  {
     name: "Sophie M.",
     text: "Nach Jahren mit Rückenschmerzen habe ich endlich eine Trainingsmethode gefunden, die wirklich hilft. Die kleine Gruppengröße macht den Unterschied.",
     highlight: "Endlich schmerzfrei",
@@ -12,11 +22,6 @@ const testimonials = [
     name: "Laura K.",
     text: "Die persönliche Betreuung ist einzigartig. Jessie achtet auf jede Bewegung und korrigiert sanft – so habe ich meine Haltung komplett verändert.",
     highlight: "Individuelle Betreuung",
-  },
-  {
-    name: "Anna T.",
-    text: "Reformer Pilates ist mein wöchentliches Highlight. Das Studio hat eine wunderbare Atmosphäre und ich fühle mich nach jeder Stunde gestärkt.",
-    highlight: "Mein Wochenritual",
   },
 ];
 
